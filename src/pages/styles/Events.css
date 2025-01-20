@@ -1,0 +1,148 @@
+/* General Styling */
+.events-page {
+    font-family: Arial, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 40px;
+  }
+  
+  .head{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .head h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #ff6a00;
+    text-transform: uppercase;
+  }
+  
+  .cta-button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Upcoming Events Section */
+  .upcoming-events h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: goldenrod;
+    text-transform: uppercase;
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .event-card h2 {
+    margin-bottom: 10px;
+    color: #222;
+    
+  }
+  
+  .event-card p {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .event-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .event-card li {
+    margin-bottom: 10px;
+    align-items: center; /* Vertically align the items in the flex container */
+    display: flex;
+    color: #444;
+  }
+  
+  .fire-icon {
+    color: #ff5722;
+    margin-right: 10px;
+  }
+
+  .tick-icon {
+    color: #28a745;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+ 
+
+  @media (min-width: 768px) {
+    .events-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  
+  @media (max-width: 767px) {
+
+    .events-page {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .head h1{
+      font-size: 1.5rem;
+    }
+
+    .upcoming-events h1{
+      font-size: 1.3rem;
+    }
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .event-card {
+      margin: 0 auto;
+      padding: 15px; /* Reduce padding inside the card */
+        margin-bottom: 20px;
+    }
+
+    .event-card h {
+        text-align: center;
+    }
+
+    .event-card p {
+        font-size: 1.1rem;
+    }
+
+    .event-card li {
+        font-size: 1rem;
+        margin-bottom: 12px; /* Add space between items */
+        align-items: flex-start; 
+    }
+
+    .tick-icon {
+        font-size: 1.1rem;
+    }
+  }
+  

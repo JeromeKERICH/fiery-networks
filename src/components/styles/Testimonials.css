@@ -1,0 +1,131 @@
+/* Testimonials.css */
+.testimonials-section {
+   padding: 3rem 1rem;
+    background-color: #f9fafb;
+  }
+  
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .subheading {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #4b5563;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ff6a00;
+    text-transform: uppercase;
+  }
+  
+  .check-reviews {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .reviews-link {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+    border-bottom: 2px solid #1f2937;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  .reviews-link:hover {
+    color: #4b5563;
+    border-color: #4b5563;
+  }
+  
+  .testimonials-wrapper {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rating {
+    display: flex;
+  }
+  
+  .star {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #fdb241;
+  }
+  
+  .testimonial-text {
+    font-size: 1.125rem;
+    color: #1f2937;
+    margin-top: 2rem;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+  }
+  
+  .author-avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .author-info {
+    margin-left: 1rem;
+  }
+  
+  .author-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1f2937;
+  }
+  
+  .author-job {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 640px) {
+
+  
+    .testimonials-wrapper {
+      grid-template-columns: 1fr 1fr;
+     
+    }
+  }
+  
+  @media (min-width: 1024px) {
+
+    
+    .testimonials-wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (max-width:768px) {
+    .testimonials-section {
+        padding: 1.5rem 0.5rem;
+    }
+    .heading  {
+        font-size: 1.5rem;
+    }
+
+  }
+  

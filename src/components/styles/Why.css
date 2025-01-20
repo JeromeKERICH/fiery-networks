@@ -1,0 +1,128 @@
+
+  
+  .why-section {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+  }
+  
+  .why-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .why-section h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff6a00; 
+    margin-bottom: 20px;
+  }
+  
+  .why-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .why-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: goldenrod;
+    margin-bottom: 10px;
+  }
+  
+  .why-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .why-section li {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .why-section .share-note {
+    font-size: 1rem;
+    color: #ff6a00; /* Highlighted text */
+    margin-top: 20px;
+  }
+  
+  .why-section .welcome-message {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .why-section .slogan {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff6a00;
+    margin-top: 20px;
+  }
+  
+  .fire-icon {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 5rem;
+    color: #ff6a00;
+    opacity: 0.15;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+
+    .why-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .why-section h2 {
+      font-size: 2rem;
+    }
+  
+    .why-section p {
+      font-size: 1.2rem;
+      text-align: start;
+    }
+  
+    .why-section h3 {
+      font-size: 1.25rem;
+    }
+  
+    .why-section li {
+        text-align: start;
+      font-size: 1.2rem;
+    }
+  
+    .why-section .share-note {
+      font-size: 1.2rem;
+    }
+
+    .share-note p {
+      font-size: 1.2rem;
+    }
+  
+    .why-section .welcome-message {
+      text-align: center;
+      color: #333;
+      font-size: 1.2rem;
+    }
+  
+    .why-section .slogan {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  
+    .fire-icon {
+      font-size: 4rem;
+      top: -10px;
+      right: 10px;
+    }
+  }
+  

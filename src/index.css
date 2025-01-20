@@ -1,0 +1,40 @@
+@import 'slick-carousel/slick/slick.css';
+@import "~slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+  background-color: var(--secondary-dark-blue);
+  color: var(--tertiary-white);
+}
+
+h1, h2, h3 {
+  color: var(--primary-red);
+}
+
+a {
+  color: var(--primary-yellow);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-orange);
+}
+
+button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: var(--primary-red);
+  color: var(--tertiary-white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-yellow);
+}

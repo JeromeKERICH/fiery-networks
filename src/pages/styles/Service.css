@@ -1,0 +1,179 @@
+.service-page {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+  
+  .introduction {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .introduction h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #e65c00;
+    margin-bottom: 10px;
+  }
+  
+  .introduction p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Service Box Styles */
+  .service-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .service-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .service-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .service-box li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .tick-icon {
+    color: #28a745;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Button Styles */
+  .cta-button {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Unique Button Classes */
+  .btn-linkedin {
+    background-color: #0073b1;
+  }
+  
+  .btn-linkedin:hover {
+    background-color: #005582;
+  }
+  
+  .btn-event {
+    background-color: #ff6a00;
+  }
+  
+  .btn-event:hover {
+    background-color: #e65c00;
+  }
+  
+  .btn-bootcamp {
+    background-color: #28a745;
+  }
+  
+  .btn-bootcamp:hover {
+    background-color: #1e8738;
+  }
+  
+  .btn-consulting {
+    background-color: #ff0000;
+  }
+  
+  .btn-consulting:hover {
+    background-color: #cc0000;
+  }
+
+  .btn-events {
+    background-color: #1e8738;
+  }
+
+  .btn-events:hover {
+    background-color: #1e8738;
+  }
+
+  .btn-social {
+    background-color: #005582;
+  }
+  .btn-social:hover {
+    background-color: #005582;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-page {
+        padding-top: 5%;
+        padding-left: 4%;
+        padding-right: 4%;
+        grid-template-columns: 1fr;
+    }
+    .introduction h1 {
+      font-size: 2rem;
+    }
+  
+    .introduction p {
+      font-size: 1rem;
+      text-align: start;
+    }
+  
+    .service-box {
+      text-align: center;
+    }
+  
+    .service-box h2 {
+      font-size: 1.5rem;
+    }
+  
+    .service-box p {
+        text-align: start;
+      font-size: 0.9rem;
+    }
+  
+    .service-box ul {
+      margin-bottom: 15px;
+    }
+
+    .service-box ul li {
+        text-align: start;
+    }
+  }
+  

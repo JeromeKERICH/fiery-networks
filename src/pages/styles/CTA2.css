@@ -1,0 +1,72 @@
+.ignite-cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f8f8f8;
+    color: #333;
+    text-align: center;
+  }
+  
+  .ignite-cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .ignite-cta-title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ff6a00;
+  }
+  
+  .ignite-cta-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .ignite-cta-highlight {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 35px;
+  }
+  
+  .ignite-cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .ignite-cta-button:hover {
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ignite-cta-title {
+      font-size: 1.5rem;
+    }
+  
+    .ignite-cta-description {
+      font-size: 1.2rem;
+      text-align: start;
+    }
+  
+    .ignite-cta-button {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+  
