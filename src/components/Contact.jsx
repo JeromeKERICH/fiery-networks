@@ -12,7 +12,7 @@ const ContactPage = () => {
           <div className="contact-item">
             <i className="fas fa-map-marker-alt"></i>
             <div>
-              <p>1234 Network Avenue, City, Country</p>
+              <p>Nairobi, Kenya</p>
             </div>
           </div>
 
@@ -20,7 +20,7 @@ const ContactPage = () => {
             <i className="fas fa-phone-alt"></i>
             <div>
               
-              <p>+123 456 7890</p>
+              <p>+254 729 466 141</p>
             </div>
           </div>
 
