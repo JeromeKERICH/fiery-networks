@@ -11,7 +11,7 @@ const HeroSection = () => {
         <p>You’re here because you’re ready to level up, right? <br></br>Good. You’ve come to the right place.</p>
         <div className="cta-buttons">
           <Link to="/deal" className="cta-btn primary">Get the Deal</Link>
-          <Link to="/#" classname="cta-btn secondary">Level Up</Link>
+          <Link to="/#" className="cta-btn secondary">Level Up</Link>
         </div>
       </div>
     </section>
