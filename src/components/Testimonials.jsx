@@ -18,11 +18,11 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonials-wrapper">
-          <div className="testimonial-card">
-            <blockquote className="testimonial-text">
+          <div className="testimonials-card">
+            <blockquote className="testimonials-text">
               <p>“Miriam's positive energy and vibrant spirit make her a standout authority in her niche. She approaches her work with genuine passion, always putting her heart into everything she does.”</p>
             </blockquote>
-            <div className="testimonial-author">
+            <div className="testimonials-author">
               <img
                 className="author-avatar"
                 src="assets/chinyere.jpg"
@@ -35,11 +35,11 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <div className="testimonial-card">
-            <blockquote className="testimonial-text">
+          <div className="testimonials-card">
+            <blockquote className="testimonials-text">
               <p>“I have had the pleasure of knowing Miriam both personally and professionally, and I can effortlessly and confidently say that she is an exceptional being with remarkable talents.”</p>
             </blockquote>
-            <div className="testimonial-author">
+            <div className="testimonials-author">
               <img
                 className="author-avatar"
                 src="assets/beril.jpg"
@@ -52,11 +52,11 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <div className="testimonial-card">
-            <blockquote className="testimonial-text">
+          <div className="testimonials-card">
+            <blockquote className="testimonials-text">
               <p>“Miriam was an incredible mentor I met at a virtual book publishing event. She taught me the basics of copywriting through clear, practical examples when I knew very little about the field. .”</p>
             </blockquote>
-            <div className="testimonial-author">
+            <div className="testimonials-author">
               <img
                 className="author-avatar"
                 src="assets/sumaya.jpg"

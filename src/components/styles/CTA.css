@@ -26,13 +26,13 @@
     line-height: 1.5;
   }
   
-  .cta-buttons {
+  .ctass-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
   }
   
-  .cta-btn {
+  .ctass-btn {
     display: inline-block;
     font-size: 1.2rem;
     font-weight: bold;

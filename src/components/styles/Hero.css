@@ -44,13 +44,13 @@
     line-height: 1.6;
   }
   
-  .cta-buttons {
+  .ctass-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
   }
   
-  .cta-btn {
+  .ctass-btn {
     padding: 15px 30px;
     font-size: 18px;
     text-decoration: none;
@@ -58,22 +58,22 @@
     transition: background-color 0.3s ease;
   }
   
-  .cta-btn.primary {
+  .ctass-btn.primary {
     background-color: #e74c3c;
     color: white;
   }
   
-  .cta-btn.primary:hover {
+  .ctass-btn.primary:hover {
     background-color: #c0392b;
   }
   
-  .cta-btn.secondary {
+  .ctass-btn.secondary {
     background-color: transparent;
     border: 2px solid #e74c3c;
     color: #e74c3c;
   }
   
-  .cta-btn.secondary:hover {
+  .ctass-btn.secondary:hover {
     background-color: #e74c3c;
     color: white;
   }

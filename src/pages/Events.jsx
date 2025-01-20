@@ -66,7 +66,7 @@ const EventsPage = () => {
           </li>
         ))}
       </ul>
-      <button className="cta-button">{buttonText}</button>
+      <button className="cta-buttons">{buttonText}</button>
     </div>
   );
 

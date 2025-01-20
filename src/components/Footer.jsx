@@ -1,54 +1,52 @@
-import React from 'react';
-import './styles/Footer.css';
+import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"; // Importing icons
+import "./styles/Footer.css";
 
 const Footer = () => {
   return (
-    
-    <footer className="footer-section">
-      <hr></hr>
+    <footer className="footer">
       <div className="footer-container">
-        <div className="footer-left">
-          
-          <h3>Fiery Networks</h3>
-          <p>Innovating your digital solutions with cutting-edge technology.</p>
+        {/* Logo and Description */}
+        <div className="footer-logo-section">
+          <div className="footer-logo">Fiery Networks</div>
+          <p className="footer-description">
+            Your Fiery Lady. Your business Secured
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div className="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Us */}
+        <div className="footer-contact">
+          <h3>Contact Us</h3>
+          <p>contact@fierynetworks.com</p>
+          <p>+254 729 466 141</p>
+        </div>
+
+        {/* Social Links */}
+        <div className="footer-social">
+          <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-instagram"></i>
-            </a>
+            <a href="#"><FaFacebook /></a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedin /></a>
           </div>
-        </div>
-
-        <div className="footer-center">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div className="footer-right">
-          <h4>Contact Us</h4>
-          <ul>
-            <li><strong>Email:</strong> info@fierynetworks.com</li>
-            <li><strong>Phone:</strong> +254 729 466 141</li>
-            <li><strong>Address:</strong> Nairobi, Kenya</li>
-          </ul>
         </div>
       </div>
 
+      {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>&copy; 2025 Fiery Networks. All Rights Reserved.</p>
+        © 2025 Fiery Networks. All Rights Reserved. <a href="www.trichenest.com">Designed by Triche Nest</a>
       </div>
     </footer>
   );
