@@ -14,7 +14,7 @@ const AboutPage = () => {
         <div className="hero-content">
             <img src="assets/about.jpg" alt="Miriam Maru" className="profile-photo" />
             <div className="hero-text">
-            <h1>Miriam Maru</h1>
+            <h1>I'm Miriam Maru</h1>
             <h2>The Fiery Lady Igniting Global Impact</h2>
             <p>
                 I threw the rules out the window and built my own path to freedom. If you’re ready to transform your LinkedIn, kickstart your freelance career, or supercharge your social media strategy, you’re in the right place.

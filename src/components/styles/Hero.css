@@ -1,6 +1,6 @@
 /* Hero Section Styles */
 .hero-section {
-    background: linear-gradient(rgba(183, 184, 173, 0.5), rgba(160, 192, 18, 0.5)), url('assets/back.jpg');
+    background: linear-gradient(rgba(183, 184, 173, 0.5), rgba(160, 192, 18, 0.5)), url('/assets/back.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;

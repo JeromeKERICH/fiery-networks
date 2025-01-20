@@ -5,8 +5,8 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1>Hey Fiery Being</h1>
-        <h2>Where we don’t just spark global impact, we set it ablaze.</h2>
+        <h1>Hello, Fiery Dreamer</h1>
+        <h2>We don’t just spark global impact, we set it ablaze.</h2>
         <p>You’re here because you’re ready to level up, right? <br></br>Good. You’ve come to the right place.</p>
         <div className="cta-buttons">
           <a href="/deal" className="cta-btn primary">Get the Deal</a>
