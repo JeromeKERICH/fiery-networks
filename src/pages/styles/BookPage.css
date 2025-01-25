@@ -169,7 +169,7 @@ body {
 }
 
 .modal-nav-btn {
-  background-color: #ff6347;
+  background-color: goldenrod;
   color: white;
   padding: 5px 15px;
   border: none;
@@ -181,7 +181,7 @@ body {
 }
 
 .modal-nav-btn:hover {
-  background-color: #e55347;
+  background-color: #ff6a00;
 }
 
 .modal-content {
@@ -189,7 +189,7 @@ body {
 }
 
 .pay-btn {
-  background-color: #ff6347;
+  background-color: green;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -201,8 +201,9 @@ body {
 }
 
 .pay-btn:hover {
-  background-color: #e55347;
+  background-color: green;
 }
+
 
 input[type="text"] {
   width: 100%;
@@ -213,7 +214,7 @@ input[type="text"] {
 }
 
 .close-modal {
-  background-color: #f44336;
+  background-color: #e53935;
   color: white;
   padding: 5px 10px;
   font-size: 16px;
