@@ -4,7 +4,7 @@
     padding-left: 10%;
     padding-right: 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
   }
   
@@ -48,9 +48,9 @@
   }
   
   .service-box p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
-    color: #555;
+    color: #111;
   }
   
   .service-box ul {
@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #444;
   }
   
@@ -73,187 +73,27 @@
     font-size: 1rem;
   }
   
-  /* Button Styles */
-  .cta-button {
-    text-align: center;
+  .learn-more-btn {
     display: inline-block;
+    margin-top: 1rem;
     padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    border: none;
+    background-color: transparent;
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
   }
   
-  .cta-button:hover {
-    transform: scale(1.05);
+  .learn-more-btn:hover {
+    background-color: #e64a19;
   }
   
-  /* Unique Button Classes */
-  .btn-linkedin {
-    background-color: #0073b1;
-  }
+
   
-  .btn-linkedin:hover {
-    background-color: #005582;
-  }
-  
-  .btn-event {
-    background-color: #ff6a00;
-  }
-  
-  .btn-event:hover {
-    background-color: #e65c00;
-  }
-  
-  .btn-bootcamp {
-    background-color: #28a745;
-  }
-  
-  .btn-bootcamp:hover {
-    background-color: #1e8738;
-  }
-  
-  .btn-consulting {
-    background-color: #ff0000;
-  }
-  
-  .btn-consulting:hover {
-    background-color: #cc0000;
-  }
-
-  .btn-events {
-    background-color: #1e8738;
-  }
-
-  .btn-events:hover {
-    background-color: #1e8738;
-  }
-
-  .btn-social {
-    background-color: #005582;
-  }
-  .btn-social:hover {
-    background-color: #005582;
-  }
 
 
-  /* Modal overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
 
-/* Modal */
-.modal {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Modal overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Modal */
-.modal {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Service selection */
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-select, input[type="text"], input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-input[type="text"], input[type="email"] {
-  font-size: 16px;
-}
-
-/* Submit and Close button */
-.btn-submit {
-  background-color: transparent;
-  color: #333;
-  padding: 10px 20px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.btn-submit:hover {
-  background-color: #ff3d3d;
-}
-
-.close-btn {
- 
-  background-color: #ff5c5c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.close-btn:hover {
-  background-color: #ff3d3d;
-}
-
-/* CTA button */
-.cta-btn {
-  display: block;
-  margin: 30px auto;
-  padding: 15px 30px;
-  background-color: #ff5c5c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.cta-btn:hover {
-  background-color: #ff3d3d;
-}
 
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -264,7 +104,7 @@ input[type="text"], input[type="email"] {
         grid-template-columns: 1fr;
     }
     .introduction h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   
     .introduction p {
@@ -282,7 +122,7 @@ input[type="text"], input[type="email"] {
   
     .service-box p {
         text-align: start;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
   
     .service-box ul {

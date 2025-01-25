@@ -1,15 +1,46 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./styles/BookPage.css";
 
 function Book() {
-   useEffect(() => {
-          // Reset scroll position to top on every route change
-          window.scrollTo(0, 0);
-        }, []);
+  useEffect(() => {
+    // Reset scroll position to top on every route change
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [paymentOption, setPaymentOption] = useState(null);
+
+  // Toggle Modal visibility
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handlePaystackPayment = (amount) => {
+    const handler = PaystackPop.setup({
+      key: 'pk_test_c91ea464a4db7258e11add29af2ebcf853637827',
+      email: 'customer-email@example.com',
+      amount: amount * 100,
+      currency: 'NGN',
+      onClose: function() {
+        alert('Payment was not completed');
+      },
+      callback: function(response) {
+        alert('Payment complete! Reference: ' + response.reference);
+      },
+    });
+
+    handler.openIframe();
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    handlePaystackPayment(200);
+  };
+
   return (
     <div className="container">
       {/* Header Section */}
-      <section className="book-head ">
+      <section className="book-head">
         <h1>Dear Newbie: Getting Started in the Freelancing World</h1>
         <h2>The Ultimate Guide to Going From Zero to Freelance Hero</h2>
       </section>
@@ -39,8 +70,7 @@ function Book() {
       </section>
 
       {/* Testimonials Section */}
-       {/* Testimonials Section */}
-       <section className="testimonials">
+      <section className="testimonials">
         <div className="testimonial-card">
           <p>"There are only a few books I read without putting them down, and Dear Newbie is one of them..."</p>
           <div className="author">- Abirami Sekar</div>
@@ -55,14 +85,61 @@ function Book() {
         </div>
       </section>
 
-      {/* Call-to-action Section */}
+      {/* CTA Button */}
       <section className="cta">
-        <a href="#" className="cta-button">
+        <a href="#" className="cta-button" onClick={toggleModal}>
           Get Your Copy Now
         </a>
       </section>
 
-     
+      {/* Modal */}
+      {isOpen && (
+        <div className="modal-overlay" onClick={toggleModal}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h2 className="modal-title">Choose Your Copy</h2>
+            
+            {/* Navigation */}
+            <div className="navigation">
+              <button onClick={() => setPaymentOption('soft')} className="modal-nav-btn">
+                Soft Copy
+              </button>
+              <button onClick={() => setPaymentOption('hard')} className="modal-nav-btn">
+                Hard Copy
+              </button>
+            </div>
+
+            {/* Payment Option Content */}
+            {paymentOption === 'soft' && (
+              <div className="modal-content">
+                <h3>Soft Copy</h3>
+                <p>Pay and download the book directly.</p>
+                <button onClick={() => handlePaystackPayment(100)} className="pay-btn">
+                  Pay for Soft Copy
+                </button>
+              </div>
+            )}
+
+            {paymentOption === 'hard' && (
+              <div className="modal-content">
+                <h3>Hard Copy</h3>
+                <p>Fill your delivery details and pay for the hard copy.</p>
+                <form onSubmit={handleFormSubmit}>
+                  <input type="text" placeholder="Full Name" required />
+                  <input type="text" placeholder="Phone Number" required/>
+                  <input type="text" placeholder="Email Address" required/>
+                  <input type="text" placeholder="Delivery Address" required />
+                 
+                  <button type="submit" className="pay-btn">
+                    Pay for Hard Copy
+                  </button>
+                </form>
+              </div>
+            )}
+            {/* Close Button */}
+            <button className="close-modal" onClick={toggleModal}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,6 +1,4 @@
 
-  
-  /* WhatsApp LinkedIn Course Page */
   .whatsapp-course-page {
     max-width: 1200px;
     margin: 0 auto;
@@ -59,10 +57,11 @@
   
   .course-options-section h2 {
     font-size: 2rem;
-    color: #333;
+    color: #555;
   }
   
   .course-options {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -89,6 +88,7 @@
   }
   
   .outcome-text {
+    padding: 20px;
     font-size: 1.2rem;
     color: #333;
     margin-top: 30px;
@@ -170,9 +170,17 @@
   .close-modal:hover {
     background-color: #777;
   }
+
+  .outcome-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
   
   /* Responsive Design */
   @media (max-width: 768px) {
+
+    .whatsapp-course-page {
+      margin-top: -20px;
+    }
     .course-options {
       flex-direction: column;
       align-items: center;
@@ -184,16 +192,24 @@
   
 
     .header-section h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 
     .header-section h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .header-section p {
+      font-size: 1.1rem;
     }
 
     .course-options-section h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 550;
     }
+
+    
     .cta-button {
       font-size: 1rem;
       padding: 12px 24px;
@@ -201,6 +217,12 @@
   
     .modal-content {
       padding: 20px;
+    }
+
+    .outcome-text {
+      margin-top: 0;
+      text-align: start;
+      font-size: 1.1rem;
     }
   }
   

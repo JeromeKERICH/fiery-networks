@@ -36,9 +36,9 @@
   }
   
   .course-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: 600;
     color: #c0392b;
   }
   
@@ -65,12 +65,13 @@
   /* Responsive design */
   @media (max-width: 768px) {
     .course-section {
+      margin-top: 10px;
         padding-left: 4%;
         padding-right: 4%;
     }
 
     .course-section h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     
@@ -85,13 +86,13 @@
     }
 
     .course-card h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: start;
 
     }
 
     .course-card p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: start;
     }
   }

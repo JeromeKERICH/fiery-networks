@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./styles/Whatsapp.css"
 
 const Whatsapp = () => {
@@ -6,6 +6,12 @@ const Whatsapp = () => {
 
   // Toggle the modal visibility
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+ useEffect(() => {
+         // Reset scroll position to top on every route change
+         window.scrollTo(0, 0);
+       }, []);
+
 
   return (
     <div className="whatsapp-course-page">
@@ -16,12 +22,12 @@ const Whatsapp = () => {
           These 10-session courses are delivered via WhatsApp every weekday (excluding weekends) and are perfect for anyone who prefers bite-sized learning that fits into their busy schedule.
         </p>
         <button onClick={toggleModal} className="cta-button">
-          Start WhatsApp Learning Now
+          Start Learning Now
         </button>
       </header>
 
       <section className="course-options-section">
-        <h2>🔥 Course Options:</h2>
+        <h2>🔥 Course Options</h2>
         <div className="course-options">
           <div className="course-option">
             <h3>LinkedIn Profile Optimization</h3>

@@ -51,7 +51,7 @@ const Header = () => {
           <Link to="/aboutpage" className="nav-link">About</Link>
           <Link to="/servicepage" className="nav-link">Services</Link>
           <Link to="/eventspage" className="nav-link">Events</Link>
-          <Link to="/book" className="nav-link">Dear Newbie</Link>
+          <Link to="/book" className="nav-link">Get My Book</Link>
         </nav>
 
       
@@ -112,7 +112,7 @@ const Header = () => {
             onClick={closeMenu}
           >
             
-            Dear Newbie
+            Get My Book
           </Link>
         </div>
       </div>

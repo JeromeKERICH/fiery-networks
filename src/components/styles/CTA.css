@@ -1,17 +1,17 @@
 /* Global Styles */
-.cta-section {
+.ctas-section {
     background: #f8f8f8;
     color: #222;
     padding: 60px 20px;
     text-align: center;
   }
   
-  .cta-content {
+  .ctas-content {
     max-width: 800px;
     margin: 0 auto;
   }
   
-  .cta-section h2 {
+  .ctas-section h2 {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 600;
@@ -19,7 +19,7 @@
     color: goldenrod;
   }
   
-  .cta-section p {
+  .ctas-section p {
     font-size: 1.2rem;
     color: #444;
     margin-bottom: 30px;
@@ -68,21 +68,21 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .cta-section h2 {
-      font-size: 2rem;
+    .ctas-section h2 {
+      font-size:  1.5rem;
     }
   
-    .cta-section p {
+    .ctas-section p {
       font-size: 1.2rem;
       text-align: start;
     }
   
-    .cta-btn {
+    .ctass-btn {
       font-size: 1rem;
-      padding: 12px 24px;
+      padding: 8px 15px;
     }
     
-    .cta-buttons {
+    .ctass-buttons {
       flex-direction: column;
       gap: 15px;
     }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./styles/Service.css";
+import CTA2 from "./CTA2";
 
 const services = [
   {
@@ -13,6 +15,7 @@ const services = [
       "Content Strategy for consistent engagement.",
       "Audience Growth for the right connections.",
     ],
+    path: "/linkedinmanagement",
   },
   {
     title: "Event Hosting & Moderation",
@@ -23,6 +26,7 @@ const services = [
       "Seamless Moderation for smooth conversations.",
       "Customized Experiences tailored to your goals.",
     ],
+    path: "/eventhosting",
   },
   {
     title: "21-Day LinkedIn Mastery Bootcamp",
@@ -34,6 +38,7 @@ const services = [
       "Expert Guidance for connections and content.",
       "Exclusive Strategies for growth.",
     ],
+    path: "/linkedinbootcamp",
   },
   {
     title: "Freelancing & Content Marketing Consulting",
@@ -44,68 +49,16 @@ const services = [
       "Content Marketing Strategy tailored to your audience.",
       "One-on-One Coaching for specific goals.",
     ],
+    path: "/freelancingconsulting",
   },
-  {
-    title: "Pop-Up Events & Road Trips",
-    description:
-      "Let’s hit the road together! I’m not talking about just any road trip, this is about combining fun, learning, and networking in ways that only I can.",
-    features: [
-      "Workshops, learning, and networking",
-      "Apply real-world tactics and strategies on the go",
-      "Get connected with like-minded individuals",
-    ],
-  },
-  {
-    title: "Social Media Marketing & Content Creation",
-    description:
-      "Whether it’s Instagram, LinkedIn, Facebook, or X, I know how to create content that speaks.",
-    features: [
-      "A customized plan that works for your audience",
-      "I’ll craft posts that get people to stop scrolling and start interacting.",
-      "Your voice, tone, and story will be aligned across all platforms.",
-    ],
-  },
+  
 ];
 
 const ServicePage = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState(null);
-  const [userDetails, setUserDetails] = useState({
-    name: "",
-    email: "",
-  });
-
   useEffect(() => {
     // Reset scroll position to top on every route change
     window.scrollTo(0, 0);
   }, []);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  const handleServiceSelect = (e) => {
-    setSelectedService(e.target.value);
-  };
-
-  const handleInputChange = (e) => {
-    setUserDetails({
-      ...userDetails,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Logic for checkout can go here
-    console.log("Checkout details:", { selectedService, userDetails });
-    alert("Checkout initiated for " + selectedService);
-    closeModal();
-  };
 
   return (
     <section className="service-page">
@@ -131,69 +84,16 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
+          {/* Learn More Button */}
+          <Link to={service.path} className="learn-more-btn">
+            Learn More
+          </Link>
         </div>
       ))}
 
-      {/* CTA Button */}
-      <button className="cta-btn" onClick={openModal}>
-        Get Started
-      </button>
-
-      {/* Modal */}
-      {modalOpen && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Select a Service and Provide Your Details</h2>
-            <form onSubmit={handleSubmit}>
-              {/* Service Selection */}
-              <label htmlFor="service">Choose a Service</label>
-              <select
-                id="service"
-                value={selectedService || ""}
-                onChange={handleServiceSelect}
-                required
-              >
-                <option value="">Select a Service</option>
-                {services.map((service, index) => (
-                  <option key={index} value={service.title}>
-                    {service.title}
-                  </option>
-                ))}
-              </select>
-
-              {/* User Details */}
-              <label htmlFor="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={userDetails.name}
-                onChange={handleInputChange}
-                required
-              />
-
-              <label htmlFor="email">Your Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={userDetails.email}
-                onChange={handleInputChange}
-                required
-              />
-
-              {/* Submit Button */}
-              <button type="submit" className="btn-submit">
-                Proceed to Checkout
-              </button>
-            </form>
-            <button className="close-btn" onClick={closeModal}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </section>
+
+    
   );
 };
 

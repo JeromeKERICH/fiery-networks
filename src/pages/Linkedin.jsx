@@ -1,80 +1,229 @@
+import React, { useState, useEffect } from "react";
+import { FaCheck } from "react-icons/fa";
+import { PaystackButton } from "react-paystack";
+import "./styles/Linkman.css";
 
-import  { useState, useEffect} from 'react';
-import './styles/Linkedin.css';
-
-
-const Linkedin = () => {
+const LinkedInBootcamp = () => {
   useEffect(() => {
-        // Reset scroll position to top on every route change
-        window.scrollTo(0, 0);
-      }, []);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    // Reset scroll position to top on every route change
+    window.scrollTo(0, 0);
+  }, []);
 
-  // Toggle the modal visibility
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    package: "Beginner Package",
+    amount: 10000 * 100, // Default amount in kobo (multiplied by 100)
+  });
+
+  const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handlePackageChange = (e) => {
+    const selectedPackage = e.target.value;
+    const amount =
+      selectedPackage === "Beginner Package"
+        ? 10000 * 100
+        : selectedPackage === "Intermediate Package"
+        ? 20000 * 100
+        : 30000 * 100; // Amount in kobo
+    setFormData((prev) => ({
+      ...prev,
+      package: selectedPackage,
+      amount,
+    }));
+  };
+
+  const handleSuccess = () => {
+    // Redirect to WhatsApp group after payment
+    window.location.href = "https://chat.whatsapp.com/your-group-link"; // Replace with your WhatsApp group link
+  };
+
+  const handleCheckout = () => setShowForm(true);
+
+  const closeForm = () => setShowForm(false);
+
+  const paystackConfig = {
+    email: formData.email,
+    amount: formData.amount, // Amount in kobo
+    publicKey,
+    currency: "KES", // Specify the currency as Kenyan Shillings (KES)
+    metadata: {
+      name: formData.name,
+      phone: formData.phone,
+      package: formData.package,
+    },
+    onSuccess: handleSuccess,
+    onClose: () => alert("Payment was not completed. Please try again."),
+  };
 
   return (
-    <div className="bootcamp-page">
-      <header className="header-section">
-        <h1>LinkedIn Mastery Bootcamp</h1>
-        <h3>21 Days to a Killer LinkedIn Profile</h3>
-        <p>
-          Ready to dominate LinkedIn? This 21-day bootcamp is for anyone who
-          wants to stand out on LinkedIn and get noticed by the right people—
-          whether you're building a personal brand, looking for clients, or hunting
-          for a job.
-        </p>
-        <button onClick={toggleModal} className="cta-button">
-          Join the 21-Day Bootcamp
-        </button>
+    <div className="service-detail">
+      {/* Header Section */}
+      <header className="service-header">
+        <div className="header-content">
+          <h1>LinkedIn Bootcamp</h1>
+          <p>
+            Unlock the full potential of LinkedIn with our comprehensive bootcamp.
+            Learn strategies to optimize your profile, grow your network, and
+            enhance your personal brand for professional success.
+          </p>
+        </div>
+        <div className="header-image">
+          <img
+            src="assets/market.jpg" 
+            alt="LinkedIn Bootcamp"
+          />
+        </div>
       </header>
 
-      <section className="what-you-learn-section">
-        <h2>🔥 What You’ll Learn:</h2>
-        <div className="learning-outcome">
-          <div className="day-block">
-            <h3>Day 1-7</h3>
-            <p>Optimizing your LinkedIn profile to attract the right audience.</p>
-          </div>
-          <div className="day-block">
-            <h3>Day 8-14</h3>
-            <p>Mastering LinkedIn content strategy—how to engage and grow your followers.</p>
-          </div>
-          <div className="day-block">
-            <h3>Day 15-21</h3>
-            <p>Advanced LinkedIn tactics—networking, using LinkedIn analytics, and leveraging premium features for maximum impact.</p>
-          </div>
+      {/* Pricing Section */}
+      <div className="pricing-boxes">
+        <div className="pricing-box">
+          <h3>Beginner Package</h3>
+          <p>Great for those just getting started on LinkedIn.</p>
+          <p className="price">KES 10,000</p>
+          <ul>
+            <li>
+              <FaCheck className="tick-icon" /> Profile Optimization for Job Seekers
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> Networking Basics and Connection Strategies
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> Introduction to LinkedIn Job Search
+            </li>
+          </ul>
         </div>
-        <p className="outcome-text">
-          By the end of this bootcamp, you’ll have a LinkedIn profile that stands
-          out, content strategies that convert, and the confidence to network like a pro.
-        </p>
-      </section>
+        <div className="pricing-box">
+          <h3>Intermediate Package</h3>
+          <p>For those looking to strengthen their LinkedIn presence.</p>
+          <p className="price">KES 20,000</p>
+          <ul>
+            <li>
+              <FaCheck className="tick-icon" /> Advanced Profile Strategies
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> Personal Branding Techniques
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> LinkedIn Ads & Content Creation Tips
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> In-depth Networking & Collaboration Strategies
+            </li>
+          </ul>
+        </div>
+        <div className="pricing-box">
+          <h3>Expert Package</h3>
+          <p>Take your LinkedIn presence to a whole new level.</p>
+          <p className="price">KES 30,000</p>
+          <ul>
+            <li>
+              <FaCheck className="tick-icon" /> Personalized LinkedIn Strategy Session
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> In-depth LinkedIn Analytics & Insights
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> Growth & Lead Generation Techniques
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> Exclusive LinkedIn Group Access
+            </li>
+            <li>
+              <FaCheck className="tick-icon" /> Job Placement Tips & Networking Opportunities
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      {/* Modal for Registration */}
-      {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h3>Register for the Bootcamp</h3>
-            <form className="registration-form">
-              <label>Name</label>
-              <input type="text" placeholder="Enter your full name" required />
-              <label>Email</label>
-              <input type="email" placeholder="Enter your email" required />
-              <label>Phone</label>
-              <input type="tel" placeholder="Enter your phone number" required />
-              <button type="submit" className="register-button">
-                Register Now
+      {/* Checkout Section */}
+      <section className="checkout-section">
+        <h2>Ready to Optimize Your LinkedIn Profile?</h2>
+        <p>
+          Join our bootcamp today and start seeing results on LinkedIn. Select
+          your package, fill in your details, and we’ll guide you step by step
+          towards LinkedIn success.
+        </p>
+
+        <button className="checkout-button" onClick={handleCheckout}>
+          Start Here
+        </button>
+
+        {showForm && (
+          <>
+            <div className="form-backdrop" onClick={closeForm}></div>
+
+            <div className="checkout-form">
+              <button className="close-now-button" onClick={closeForm}>
+                &times;
               </button>
-            </form>
-            <button className="close-modal" onClick={toggleModal}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+              <h3>Complete Your Payment</h3>
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="package">Select Package</label>
+                <select
+                  id="package"
+                  name="package"
+                  value={formData.package}
+                  onChange={handlePackageChange}
+                >
+                  <option value="Beginner Package">KES 10,000 - Beginner Package</option>
+                  <option value="Intermediate Package">KES 20,000 - Intermediate Package</option>
+                  <option value="Expert Package">KES 30,000 - Expert Package</option>
+                </select>
+              </div>
+              <PaystackButton
+                className="pay-buttons"
+                {...paystackConfig}
+              >
+                PayNow
+              </PaystackButton>
+            </div>
+          </>
+        )}
+      </section>
     </div>
   );
 };
 
-export default Linkedin;
+export default LinkedInBootcamp;

@@ -62,6 +62,7 @@
   }
   
   .course-outcome {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -172,6 +173,10 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
+
+    .copywriting-course-page  {
+      margin-top: -20px;
+    }
     .course-outcome {
       flex-direction: column;
       align-items: center;

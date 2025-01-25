@@ -60,9 +60,11 @@
   .what-you-get-section h2 {
     font-size: 2rem;
     color: #333;
+    font-weight: 550;
   }
   
   .service-outcome {
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     gap: 20px;

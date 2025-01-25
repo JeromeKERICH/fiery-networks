@@ -56,14 +56,17 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
   
   .what-you-learn-section h2 {
     font-size: 2rem;
     color: #333;
+    font-weight: 550;
   }
   
   .learning-outcome {
     display: flex;
+    padding: 10px;
     justify-content: space-between;
     gap: 20px;
     margin-top: 30px;
@@ -89,6 +92,7 @@
   
   .outcome-text {
     font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #333;
     margin-top: 30px;
     text-align: center;
@@ -170,8 +174,17 @@
     background-color: #777;
   }
   
+
+  .outcome-text {
+    padding: 20px;
+    
+  }
   /* Responsive Design */
   @media (max-width: 768px) {
+
+    .bootcamp-page {
+      margin-top: -20px;
+    }
     .learning-outcome {
       flex-direction: column;
       align-items: center;
@@ -190,7 +203,7 @@
         font-size: 1.5rem;
     }
     .day-block {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   
     .cta-button {
@@ -200,6 +213,11 @@
   
     .modal-content {
       padding: 20px;
+    }
+
+    .outcome-text {
+      text-align: start;
+      font-size: 1rem;
     }
   }
   

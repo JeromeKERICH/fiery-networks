@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./styles/About.css";
 import CTA2 from "./CTA2";
@@ -20,8 +21,9 @@ const AboutPage = () => {
                 I threw the rules out the window and built my own path to freedom. If you’re ready to transform your LinkedIn, kickstart your freelance career, or supercharge your social media strategy, you’re in the right place.
             </p>
             <div className="hero-buttons">
-                <button className="cta-button primary">Lets Work</button>
-                <button className="cta-button secondary">Explore Services</button>
+                <Link to="#" className="cta-button primary">Lets Work</Link>
+                <Link to="//servicespage" className="cta-button secondary">Explore My Services</Link>
+                
             </div>
             </div>
         </div>
