@@ -45,6 +45,9 @@ const Header = () => {
           <img src="assets/logo.png" alt="Fiery Networks Logo" className="logo" />
       </Link>
 
+
+      
+
        
         <nav className="nav-desktop">
           <Link to="/" className="nav-link">Home</Link>

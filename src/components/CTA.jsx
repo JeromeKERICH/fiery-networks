@@ -11,7 +11,7 @@ const CTASection = () => {
         </p>
         <div className="ctass-buttons">
           <a href="/book" className="ctass-btn books-btn">Buy my Book</a>
-          <a href="/services" className="ctass-btn services-btn">Explore My Services</a>
+          <a href="/servicepage" className="ctass-btn services-btn">Explore My Services</a>
         </div>
       </div>
     </section>

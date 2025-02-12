@@ -63,7 +63,7 @@ const ServicePage = () => {
   return (
     <section className="service-page">
       <div className="introduction">
-        <h1>Welcome to Fiery Network Services</h1>
+        <h1>Fiery Network Services</h1>
         <p>
           At The Fiery Network, we don’t just offer services, we ignite
           transformation. Whether you’re a freelancer ready to own your brand, a

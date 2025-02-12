@@ -2,16 +2,7 @@ import { Link } from 'react-router-dom';
 import "./styles/Courses.css"
 
 const courses = [
-  {
-    title: "LinkedIn Mastery Bootcamp (21 Days to a Killer LinkedIn Profile)",
-    description: "Transform your LinkedIn profile into a lead-generating machine in just 21 days.",
-    link: "/linkedin" 
-  },
-  {
-    title: "LinkedIn Ghostwriting Services for Business Pages",
-    description: "Master the art of writing engaging LinkedIn content for business pages.",
-    link: "/ghost" 
-  },
+
   {
     title: "Social Media Copywriting Mastery Course",
     description: "Learn how to write compelling copy that resonates with your audience across social media platforms.",

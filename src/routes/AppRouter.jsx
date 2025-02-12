@@ -18,6 +18,9 @@ import EventHostingModeration from '../pages/Hosting';
 import LinkedInBootcamp from '../pages/Bootcamp';
 import FreelancingConsulting from '../pages/Market';
 import PopUpEvents from '../pages/Popup';
+import Landing from '../pages/Landing';
+
+
 
 
 const AppRouter = () => {
@@ -41,6 +44,8 @@ const AppRouter = () => {
                 <Route path="linkedinbootcamp" element={<LinkedInBootcamp/>}/>
                 <Route path="freelancingconsulting" element={<FreelancingConsulting/>}/>
                 <Route path="popupevents" element={<PopUpEvents/>}/>
+                <Route path="landing" element={<Landing/>}/>
+               
                  
             </Routes>
         </Layout>

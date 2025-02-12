@@ -6,7 +6,6 @@ import CTA2 from "./CTA2";
 
 const AboutPage = () => {
   useEffect(() => {
-        // Reset scroll position to top on every route change
         window.scrollTo(0, 0);
       }, []);
   return (
@@ -21,8 +20,8 @@ const AboutPage = () => {
                 I threw the rules out the window and built my own path to freedom. If you’re ready to transform your LinkedIn, kickstart your freelance career, or supercharge your social media strategy, you’re in the right place.
             </p>
             <div className="hero-buttons">
-                <Link to="#" className="cta-button primary">Lets Work</Link>
-                <Link to="//servicespage" className="cta-button secondary">Explore My Services</Link>
+                <Link to="#" className="cta-button1">Pick My Brain</Link>
+                <Link to="//servicespage" className="cta-button2">Explore My Services</Link>
                 
             </div>
             </div>

@@ -73,9 +73,10 @@ const LinkedInBootcamp = () => {
         <div className="header-content">
           <h1>LinkedIn Bootcamp</h1>
           <p>
-            Unlock the full potential of LinkedIn with our comprehensive bootcamp.
-            Learn strategies to optimize your profile, grow your network, and
-            enhance your personal brand for professional success.
+            Transform your LinkedIn profile into a lead generating machnine n just 21-Days.
+            <br></br>
+            Learn proven strategies to attract clients, grow your network and land opportunities even if you are startting from the scratch.
+            In just 21 days, you'll learn step-by-step how to optimize your profile, create engaging content, and build a network that works for you—no guesswork, no fluff. This bootcamp is designed for busy professionals who want to see real results fast.
           </p>
         </div>
         <div className="header-image">

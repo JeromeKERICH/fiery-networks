@@ -1,6 +1,6 @@
 /* Global Styles */
 .ctas-section {
-    background: #f8f8f8;
+    background: #2d656d;
     color: #222;
     padding: 60px 20px;
     text-align: center;
@@ -21,7 +21,7 @@
   
   .ctas-section p {
     font-size: 1.2rem;
-    color: #444;
+    color: #f8f8f8;
     margin-bottom: 30px;
     line-height: 1.5;
   }
@@ -57,8 +57,13 @@
   
  .services-btn {
     background-color: #f8f8f8;
-    border: 1px solid #e74c3c;
+    border: none;
     color: #e74c3c;
+  }
+
+  .services-btn:hover {
+    background: #e74c3c;
+    color: #fff;
   }
   
   .cta-btn:hover {

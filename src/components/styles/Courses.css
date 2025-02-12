@@ -16,7 +16,7 @@
   }
   
   .course-section p {
-   
+    color: #333;
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
@@ -43,6 +43,7 @@
   }
   
   .course-card p {
+    color: #333;
     font-size: 1rem;
     margin-bottom: 20px;
   }
@@ -81,8 +82,8 @@
   
     .course-section p {
       font-size: 1.1rem; 
-      text-align: start;
-      color: #333;
+      text-align: center;
+      color: #f8f8f8;
     }
 
     .course-card h2 {
@@ -94,6 +95,7 @@
     .course-card p {
         font-size: 1rem;
         text-align: start;
+        color: #333;
     }
   }
   

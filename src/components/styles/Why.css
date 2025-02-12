@@ -4,7 +4,9 @@
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 20px;
     position: relative;
+   
   }
   
   .why-content {
@@ -128,14 +130,14 @@
   }
 
   .why-section p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: start;
   }
 
 
   .why-section li {
     text-align: start;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .why-section .share-note {
@@ -149,14 +151,14 @@
 
   .why-section .welcome-message {
     margin-top: 0;
-    text-align: start;
+    text-align: center;
     font-size: 1rem;
   }
 
   .why-section .slogan {
     margin-top: 0;
     font-size: 1rem;
-    text-align: start;
+    text-align: center;
   }
 
   .fire-icon {

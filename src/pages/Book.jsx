@@ -4,7 +4,7 @@ import "./styles/BookPage.css";
 
 function Book() {
   useEffect(() => {
-    window.scrollTo(0, 0); // Reset scroll position to top on every route change
+    window.scrollTo(0, 0);
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -14,66 +14,45 @@ function Book() {
     email: "",
     phone: "",
     package: "Soft Copy",
-    amount: 9900 * 100, // Default amount for soft copy (in kobo)
+    amount: 650 * 100, // Default (KES cents)
   });
 
   const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
 
-  // Toggle Modal visibility
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
 
   const handleSuccess = (response) => {
     alert("Payment successful! You can now download the book.");
+    
+    // Close the modal
+    setIsOpen(false);
+  
     if (formData.package === "Soft Copy") {
       window.open(
-        "https://yourwebsite.com/path/to/your/book.pdf", // Replace with your actual book download link
+        "assets/Newbie.pdf", // Replace with your actual book download link
         "_blank"
       );
     }
   };
-
-  const paystackConfig = {
-    email: formData.email,
-    amount: formData.amount, // Amount in kobo
-    publicKey,
-    currency: "KES", // Specify the currency as Kenyan Shillings (KES)
-    metadata: {
-      name: formData.name,
-      phone: formData.phone,
-      package: formData.package,
-    },
-    onSuccess: handleSuccess,
-    onClose: () => alert("Payment was not completed. Please try again."),
-  };
+  
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-  };
-
-  // Function to change the payment option
   const handlePaymentOptionChange = (option) => {
     setPaymentOption(option);
-    if (option === "soft") {
-      setFormData({
-        ...formData,
-        package: "Soft Copy",
-        amount: 9900 * 100, // Amount in kobo for Soft Copy
-      });
-    } else {
-      setFormData({
-        ...formData,
-        package: "Hard Copy",
-        amount: 14900 * 100, // Amount in kobo for Hard Copy
-      });
-    }
+    setFormData({
+      ...formData,
+      package: option === "soft" ? "Soft Copy" : formData.package,
+      amount: option === "soft" ? 650 * 100 : formData.amount,
+    });
   };
+  
+  
 
   return (
     <div className="container">
@@ -82,7 +61,7 @@ function Book() {
         <h1>Dear Newbie: Getting Started in the Freelancing World</h1>
         <h2>The Ultimate Guide to Going From Zero to Freelance Hero</h2>
         <p>
-          Price: <strong>Ksh. 9,900</strong> (Soft Copy) | <strong>Ksh. 14,900</strong> (Hard Copy)
+          Price: <strong>Ksh. 650</strong> (Soft Copy)
         </p>
       </section>
 
@@ -105,7 +84,7 @@ function Book() {
             <li>🔥 My personal story: How I went from being stuck in a 9-to-5 job...</li>
             <li>🔥 Actionable steps: I’ll show you exactly how I got my first freelance gig...</li>
             <li>🔥 Tips for building your brand: Whether you want to write, design, or offer any service online...</li>
-            <li>🔥 How to make money: I didn’t know it was possible either, but you can absolutely get paid doing what you love...</li>
+            <li>🔥 How to make money:I didn’t know it was possible either, but you can absolutely get paid doing what you love...</li>
           </ul>
         </div>
       </section>
@@ -134,7 +113,6 @@ function Book() {
           <div className="author">- Abraham Onyemari</div>
         </div>
       </section>
-
       {/* CTA Button */}
       <section className="cta">
         <a href="#" className="cta-button" onClick={toggleModal}>
@@ -146,84 +124,62 @@ function Book() {
       {isOpen && (
         <div className="modal-overlay" onClick={toggleModal}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h2 className="modal-title">Choose Your Copy</h2>
+            <h2 className="modal-title">Buy Your Copy</h2>
 
-            {/* Navigation */}
-            <div className="navigation">
-              <button
-                onClick={() => handlePaymentOptionChange("soft")}
-                className={`modal-nav-btn ${
-                  paymentOption === "soft" ? "active" : ""
-                }`}
-              >
-                Soft Copy
-              </button>
-              <button
-                onClick={() => handlePaymentOptionChange("hard")}
-                className={`modal-nav-btn ${
-                  paymentOption === "hard" ? "active" : ""
-                }`}
-              >
-                Hard Copy
-              </button>
+            <div className="modal-content">
+              <label>
+                <input
+                  type="radio"
+                  name="package"
+                  value="Soft Copy"
+                  checked={paymentOption === "soft"}
+                  onChange={() => handlePaymentOptionChange("soft")}
+                />{" "}
+                Soft Copy (Ksh. 650)
+              </label>
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
+              />
+
+              <PaystackButton
+                className="pay-btn"
+                amount={formData.amount}
+                email={formData.email}
+                publicKey={publicKey}
+                currency="KES"
+                metadata={{
+                  name: formData.name,
+                  phone: formData.phone,
+                  package: formData.package,
+                }}
+                onSuccess={handleSuccess}
+                onClose={() => alert("Payment not completed. Try again.")}
+                text="Buy Now"
+              />
             </div>
 
-            {/* Payment Option Content */}
-            {paymentOption === "soft" && (
-              <div className="modal-content">
-                <h3>Soft Copy</h3>
-                <p>Pay and download the book directly.</p>
-                <PaystackButton
-                  className="pay-btn"
-                  {...paystackConfig}
-                  text="Pay for Soft Copy"
-                />
-              </div>
-            )}
-
-            {paymentOption === "hard" && (
-              <div className="modal-content">
-                <h3>Hard Copy</h3>
-                <p>Fill your delivery details and pay for the hard copy.</p>
-                <form onSubmit={handleFormSubmit}>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="address"
-                    placeholder="Delivery Address"
-                    required
-                  />
-                  <PaystackButton
-                    className="pay-btn"
-                    {...paystackConfig}
-                    text="Pay for Hard Copy"
-                  />
-                </form>
-              </div>
-            )}
             {/* Close Button */}
             <button className="close-modal" onClick={toggleModal}>
               Close
