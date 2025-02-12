@@ -74,7 +74,7 @@ const Landing = () => {
       {/* Buttons */}
       <div className="landing-button-container">
         <h2>Join Now</h2>
-        <button className="landing-pay-btn">Pay 3000</button>
+        <button className="landing-pay-btn">Pay 2399KES</button>
       </div>
 
       
@@ -162,7 +162,7 @@ const Landing = () => {
  {/* Buttons */}
  <div className="landing-button-container">
         <h2>Join Now</h2>
-        <button className="landing-pay-btn">Pay 3000</button>
+        <button className="landing-pay-btn">Pay 2399KES</button>
       </div>
     </div>
     
