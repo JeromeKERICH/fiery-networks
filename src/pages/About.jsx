@@ -20,8 +20,8 @@ const AboutPage = () => {
                 I threw the rules out the window and built my own path to freedom. If you’re ready to transform your LinkedIn, kickstart your freelance career, or supercharge your social media strategy, you’re in the right place.
             </p>
             <div className="hero-buttons">
-                <Link to="/ama" className="cta-button1">Pick My Brain</Link>
-                <Link to="/servicespage" className="cta-button2">Explore My Services</Link>
+                <Link to="/ask" className="cta-button1">Pick My Brain</Link>
+                <Link to="/servicepage" className="cta-button2">Explore My Services</Link>
                 
             </div>
             </div>

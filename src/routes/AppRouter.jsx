@@ -46,7 +46,7 @@ const AppRouter = () => {
                 <Route path="freelancingconsulting" element={<FreelancingConsulting/>}/>
                 <Route path="popupevents" element={<PopUpEvents/>}/>
                 <Route path="landing" element={<Landing/>}/>
-                <Route path="ama" element={<AMA/>}/>
+                <Route path="ask" element={<AMA/>}/>
                
                  
             </Routes>

@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./styles/Ask.css"; // Importing external CSS file
 
 const Ask = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const [question, setQuestion] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [expanded, setExpanded] = useState(null);
