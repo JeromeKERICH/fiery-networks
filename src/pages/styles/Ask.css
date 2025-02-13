@@ -1,0 +1,192 @@
+/* Ask Page Styling */
+.ask-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Title & Subtitles */
+.ask-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ff6a00;
+}
+
+.ask-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Form Styling */
+.ask-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ask-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-size: 16px;
+}
+
+.ask-submit {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+
+
+/* Confirmation Message */
+.ask-confirmation {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  opacity: 1;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* FAQ Section */
+.faq-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: goldenrod;
+
+  margin-top: 30px;
+}
+
+.faq-container {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.faq-item {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+.faq-question {
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 5px;
+  color: #555;
+}
+
+/* Social Links */
+.social-container {
+  margin-top: 30px;
+}
+
+.social-title {
+  color: goldenrod;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-link {
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.social-link.linkedin { background: #0077b5; }
+.social-link.whatsapp { background: #25d366; }
+
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+
+@media(max-width: 768px) {
+  .ask-container {
+    padding: 10px;
+  }
+
+  .ask-title {
+    font-size: 1.5rem;
+  }
+
+  .ask-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .ask-form {
+    padding: 10px;
+  }
+
+  .ask-textarea {
+    font-size: 14px;
+  }
+
+  .ask-submit {
+    font-size: 16px;
+  }
+
+  .faq-title {
+    font-size: 1.3rem;
+  }
+
+  .faq-item {
+    padding: 10px;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .social-title {
+    font-size: 1.3rem;
+  }
+
+  .social-link {
+    font-size: 12px;
+  }
+}

@@ -19,6 +19,7 @@ import LinkedInBootcamp from '../pages/Bootcamp';
 import FreelancingConsulting from '../pages/Market';
 import PopUpEvents from '../pages/Popup';
 import Landing from '../pages/Landing';
+import AMA from '../pages/Ask';
 
 
 
@@ -45,6 +46,7 @@ const AppRouter = () => {
                 <Route path="freelancingconsulting" element={<FreelancingConsulting/>}/>
                 <Route path="popupevents" element={<PopUpEvents/>}/>
                 <Route path="landing" element={<Landing/>}/>
+                <Route path="ama" element={<AMA/>}/>
                
                  
             </Routes>

@@ -17,7 +17,7 @@ const Landing = () => {
     // WhatsApp Redirection
     const message = `Hello, I have successfully made a payment of 2399 KES. Here are my details:\n\nName: ${user.name}\nEmail: ${user.email}\nPhone: ${user.phone}\nTransaction ID: ${response.reference}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappLink = `https://wa.me/254729466141?text=${encodedMessage}`; // Replace with your WhatsApp number
+    const whatsappLink = `https://wa.me/254729466141?text=${encodedMessage}`; 
 
     window.location.href = whatsappLink; // Redirect to WhatsApp
 
