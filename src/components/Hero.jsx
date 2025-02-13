@@ -17,7 +17,7 @@ const HeroSection = () => {
         <p>You’re here because you’re ready to level up, right? <br></br>Good. You’ve come to the right place.</p>
         <div className="ctass-buttons">
           <Link to="/deal" className="ctass-btn primary">Get the Deal</Link>
-          <Link to="/landing" className="ctass-btn secondary">LinkedIn Bootcamp</Link>
+          <Link to="/landing" className="ctass-btn secondary">Join LinkedIn Bootcamp</Link>
         </div>
       </div>
     </section>

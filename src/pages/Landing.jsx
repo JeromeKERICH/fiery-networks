@@ -1,9 +1,38 @@
 import { FaUserTie, FaThumbsUp, FaUsers, FaClock } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { PaystackButton } from "react-paystack";
 import "./styles/Landing.css"; 
 
 const Landing = () => {
 
+  const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
+  const [user, setUser] = useState({ name: "", email: "", phone: "" });
+  const [showModal, setShowModal] = useState(false);
+
+  const amount = 2399 * 100; // Paystack uses kobo
+
+  const handleSuccess = (response) => {
+    console.log("Payment Success:", response);
+
+    // WhatsApp Redirection
+    const message = `Hello, I have successfully made a payment of 2399 KES. Here are my details:\n\nName: ${user.name}\nEmail: ${user.email}\nPhone: ${user.phone}\nTransaction ID: ${response.reference}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/254729466141?text=${encodedMessage}`; // Replace with your WhatsApp number
+
+    window.location.href = whatsappLink; // Redirect to WhatsApp
+
+    setShowModal(false); // Close modal after payment
+  };
+
+  const componentProps = {
+    email: user.email,
+    amount,
+    currency: "KES",
+    publicKey,
+    text: "Complete Payment",
+    onSuccess: handleSuccess,
+    onClose: () => alert("Payment was not completed"),
+  };
      useEffect(() => {
           window.scrollTo(0, 0);
         }, []);
@@ -73,9 +102,54 @@ const Landing = () => {
       </div>
       {/* Buttons */}
       <div className="landing-button-container">
-        <h2>Join Now</h2>
-        <button className="landing-pay-btn">Pay 2399KES</button>
-      </div>
+      <h2>Join Now</h2>
+      <button className="landing-pay-btn" onClick={() => setShowModal(true)}>
+        Pay 2399KES
+      </button>
+      {showModal && (
+        <div className="landing-modal-overlay">
+          <div className="landing-modal-content">
+            <button className="landing-close-btn" onClick={() => setShowModal(false)}>
+              &times;
+            </button>
+            <h3>Complete Your Payment</h3>
+            <p>Enter your details below to proceed with payment. Upon successful payment, you’llbe redirected. Thank you</p>
+            <div className="landing-input-group">
+              <label>Name</label>
+              <input
+                type="text"
+                required
+                placeholder="Full Name"
+                value={user.name}
+                onChange={(e) => setUser({ ...user, name: e.target.value })}
+              />
+            </div>
+            <div className="landing-input-group">
+              <label>Email</label>
+              <input
+                type="email"
+                required
+                placeholder="Email Address"
+                value={user.email}
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+              />
+            </div>
+            <div className="landing-input-group">
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                required
+                placeholder="Phone Number"
+                value={user.phone}
+                onChange={(e) => setUser({ ...user, phone: e.target.value })}
+              />
+            </div>
+            <PaystackButton className="paystack-btn" {...componentProps} />
+          </div>
+        </div>
+      )}
+    </div>
+
 
       
 
@@ -162,7 +236,7 @@ const Landing = () => {
  {/* Buttons */}
  <div className="landing-button-container">
         <h2>Join Now</h2>
-        <button className="landing-pay-btn">Pay 2399KES</button>
+        <button className="landing-pay-btn" onClick={() => setShowModal(true)}>Pay 2399KES</button>
       </div>
     </div>
     
