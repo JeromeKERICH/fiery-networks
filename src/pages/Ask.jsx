@@ -80,7 +80,7 @@ const Ask = () => {
         <p className="social-title">Join the Conversation</p>
         <div className="social-links">
           <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=miriammaru-ghostwriter-copywriter-contentwriter" className="social-link linkedin">LinkedIn</a>
-          <a href="https://wa.me/254729466141" className="social-link whatsapp">WhatsApp Group</a>
+          <a href="https://whatsapp.com/channel/0029Vb6sSYoDTkK55sl0Sa47" className="social-link whatsapp">WhatsApp Group</a>
         </div>
       </div>
     </div>
