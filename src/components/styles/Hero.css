@@ -68,9 +68,9 @@
   }
   
   .ctass-btn.secondary {
-    background-color: #f8f8f8;
+    background-color: #fff;
     border: none;
-    color: #333;
+    color: #e74c3c;
   }
   
   .ctass-btn.secondary:hover {
