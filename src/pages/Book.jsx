@@ -75,6 +75,12 @@ function Book() {
         </p>
       </section>
 
+      <section className="cta">
+        <a href="#" className="cta-button" onClick={toggleModal}>
+          Get Your Copy Now
+        </a>
+      </section>
+
       {/* Features Section */}
       <section className="features">
         <img src="assets/new1.jpg" alt="Book Cover" />

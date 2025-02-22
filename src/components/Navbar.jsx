@@ -42,7 +42,7 @@ const Header = () => {
       <div className="header-container">
         
       <Link to="/" className="navbar-logo">
-          <img src="assets/logo.png" alt="Fiery Networks Logo" className="logo" />
+          <img src="assets/icon2.png" alt="Fiery Networks Logo" className="logo" />
       </Link>
 
 

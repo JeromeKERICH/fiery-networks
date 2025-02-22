@@ -16,8 +16,10 @@ const HeroSection = () => {
         <h2>We don’t just spark global impact, we set it ablaze.</h2>
         <p>You’re here because you’re ready to level up, right? <br></br>Good. You’ve come to the right place.</p>
         <div className="ctass-buttons">
-          <Link to="/deal" className="ctass-btn primary">Get the Deal</Link>
-          <Link to="/landing" className="ctass-btn secondary">Join LinkedIn Bootcamp</Link>
+          
+          <Link to="/book" className="ctass-btn primary">Buy My Book</Link>
+          <Link to="/landing" className="ctass-btn secondary">Join LinkedIn Mastery Program</Link>
+          <Link to="/#" calendly className="ctass-btn secondary">LinkedIn Consultation</Link>
         </div>
       </div>
     </section>
