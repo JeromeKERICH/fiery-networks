@@ -93,17 +93,37 @@ const LinkedInCoaching = () => {
               <h3>Complete Your Payment</h3>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
               </div>
-              <PaystackButton className="pay-buttons" {...paystackConfig}>Pay 5000 KES</PaystackButton>
+              <PaystackButton className="pay-buttons" {...paystackConfig}>
+                Pay 5000 KES
+              </PaystackButton>
             </div>
           </>
         )}

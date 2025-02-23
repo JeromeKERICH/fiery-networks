@@ -43,20 +43,33 @@ const EventHostingModeration = () => {
     }));
   };
 
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      package: "Standard Package",
+      amount: 15000 * 100,
+    });
+    setShowForm(false);
+  };
+
   const handleSuccess = (reference) => {
     // Extract the transaction reference ID
     const transactionId = reference.reference;
-    
+
     // Construct WhatsApp message
     const message = `Hello, I have successfully purchased the ${formData.package} for KES ${formData.amount / 100}. My transaction ID is ${transactionId}.`;
-  
+
     // Encode and redirect to WhatsApp
     const whatsappLink = `https://wa.me/254718181952?text=${encodeURIComponent(message)}`;
     window.location.href = whatsappLink;
-  };
-  
-  const handleCheckout = () => setShowForm(true);
 
+    // Reset form and hide form
+    resetForm();
+  };
+
+  const handleCheckout = () => setShowForm(true);
   const closeForm = () => setShowForm(false);
 
   const paystackConfig = {
@@ -227,7 +240,7 @@ const EventHostingModeration = () => {
                 className="pay-buttons"
                 {...paystackConfig}
               >
-                PayNow
+                Pay Now
               </PaystackButton>
             </div>
           </>
