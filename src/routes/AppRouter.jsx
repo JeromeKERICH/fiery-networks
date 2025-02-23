@@ -20,6 +20,7 @@ import FreelancingConsulting from '../pages/Market';
 import PopUpEvents from '../pages/Popup';
 import Landing from '../pages/Landing';
 import AMA from '../pages/Ask';
+import Reviews from '../pages/Reviews';
 
 
 
@@ -47,6 +48,7 @@ const AppRouter = () => {
                 <Route path="popupevents" element={<PopUpEvents/>}/>
                 <Route path="landing" element={<Landing/>}/>
                 <Route path="ask" element={<AMA/>}/>
+                <Route path="reviews" element={<Reviews/>}/>
                
                  
             </Routes>

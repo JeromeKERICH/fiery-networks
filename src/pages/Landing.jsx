@@ -152,7 +152,10 @@ const Landing = () => {
 
 
       
-
+      <div className="learn-moreinfo">
+        <p>Discover the strategies that you’ll gain in this 21-Days LinkedIn Mastery.</p>
+        <a href="/linkedinbootcamp" className="learn-more-btn">Learn More</a>
+      </div>
       {/* Four Boxes Section */}
       <div className="landing-box-container">
         <div className="landing-box">

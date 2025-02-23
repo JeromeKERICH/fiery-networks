@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import { PaystackButton } from "react-paystack";
 import "./styles/Linkman.css";
@@ -9,57 +9,33 @@ const LinkedInBootcamp = () => {
     window.scrollTo(0, 0);
   }, []);
   
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    package: "Basic Package",
-    amount: 9900 * 100, // Default amount in kobo (multiplied by 100)
-  });
-
   const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
+  const [user, setUser] = useState({ name: "", email: "", phone: "" });
+  const [showModal, setShowModal] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  const amount = 2399 * 100; // Paystack uses kobo
+
+  const handleSuccess = (response) => {
+    console.log("Payment Success:", response);
+
+    // WhatsApp Redirection
+    const message = `Hello, I have successfully made a payment of 2399 KES. Here are my details:\n\nName: ${user.name}\nEmail: ${user.email}\nPhone: ${user.phone}\nTransaction ID: ${response.reference}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/254729466141?text=${encodedMessage}`; 
+
+    window.location.href = whatsappLink; // Redirect to WhatsApp
+
+    setShowModal(false); // Close modal after payment
   };
 
-  const handlePackageChange = (e) => {
-    const selectedPackage = e.target.value;
-    const amount =
-      selectedPackage === "Basic Package" ? 99 * 100 : 999 * 100; 
-    setFormData((prev) => ({
-      ...prev,
-      package: selectedPackage,
-      amount,
-    }));
-  };
-
-  const handleSuccess = () => {
-    // Redirect to WhatsApp group after payment
-    window.location.href = "https://chat.whatsapp.com/your-group-link"; // Replace with your WhatsApp group link
-  };
-
-  const handleCheckout = () => setShowForm(true);
-
-  const closeForm = () => setShowForm(false);
-
-  const paystackConfig = {
-    email: formData.email,
-    amount: formData.amount, // Amount in kobo
+  const componentProps = {
+    email: user.email,
+    amount,
+    currency: "KES",
     publicKey,
-    currency: "KES", // Specify the currency as Kenyan Shillings (KES)
-    metadata: {
-      name: formData.name,
-      phone: formData.phone,
-      package: formData.package,
-    },
+    text: "Complete Payment",
     onSuccess: handleSuccess,
-    onClose: () => alert("Payment was not completed. Please try again."),
+    onClose: () => alert("Payment was not completed"),
   };
 
   return (
@@ -71,8 +47,6 @@ const LinkedInBootcamp = () => {
           <p>
             Transform your LinkedIn profile and start attracting opportunities! This 21-day bootcamp will help you master LinkedIn like never before.
           </p>
-
-          <p className="price">KES 999</p>
         </div>
         <div className="header-image">
           <img
@@ -121,78 +95,62 @@ const LinkedInBootcamp = () => {
 
       {/* Checkout Section */}
       <section className="checkout-section">
-        <h2>Join the 21-Day LinkedIn Mastery Bootcamp Today!</h2>
+        <h2>Join the 21-Day LinkedIn Mastery Bootcamp Today For 2399/= KSH Only!</h2>
         <p>
           Don't miss out on this transformative opportunity to master LinkedIn and accelerate your career. Sign up now and start seeing results in just 21 days!
         </p>
+      
 
-        <button className="checkout-button" onClick={handleCheckout}>
-          Get Started Now
+        {/* Buttons */}
+        
+        <button className="checkout-button" onClick={() => setShowModal(true)}>
+          Join Now
         </button>
-
-        {showForm && (
-          <>
-            <div className="form-backdrop" onClick={closeForm}></div>
-
-            <div className="checkout-form">
-              <button className="close-now-button" onClick={closeForm}>
+        {showModal && (
+          <div className="landing-modal-overlay">
+            <div className="landing-modal-content">
+              <button className="landing-close-btn" onClick={() => setShowModal(false)}>
                 &times;
               </button>
               <h3>Complete Your Payment</h3>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
+              <p>Enter your details below to proceed with payment. Upon successful payment, you’llbe redirected. Thank you</p>
+              <div className="landing-input-group">
+                <label>Name</label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
+                  required
+                  placeholder="Full Name"
+                  value={user.name}
+                  onChange={(e) => setUser({ ...user, name: e.target.value })}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
+              <div className="landing-input-group">
+                <label>Email</label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
+                  required
+                  placeholder="Email Address"
+                  value={user.email}
+                  onChange={(e) => setUser({ ...user, email: e.target.value })}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="phone">Phone Number</label>
+              <div className="landing-input-group">
+                <label>Phone Number</label>
                 <input
                   type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
+                  required
+                  placeholder="Phone Number"
+                  value={user.phone}
+                  onChange={(e) => setUser({ ...user, phone: e.target.value })}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="package">Select Package</label>
-                <select
-                  id="package"
-                  name="package"
-                  value={formData.package}
-                  onChange={handlePackageChange}
-                >
-                  <option value="Basic Package">Basic Package - KES999</option>
-                  
-                </select>
+              <PaystackButton className="paystack-btn" {...componentProps} />
               </div>
-              <PaystackButton
-                className="pay-buttons"
-                {...paystackConfig}
-              >
-                Pay Now
-              </PaystackButton>
-            </div>
-          </>
+          </div>
         )}
       </section>
-    </div>
+  </div>
+
   );
 };
-
 export default LinkedInBootcamp;

@@ -44,8 +44,12 @@ const LinkedInBootcamp = () => {
   };
 
   const handleSuccess = () => {
-    // Redirect to WhatsApp group after payment
-    window.location.href = "https://chat.whatsapp.com/your-group-link"; // Replace with your WhatsApp group link
+    const message = `Hello, I have successfully purchased the ${formData.package} for the event hosting and moderation. Looking forward to it!`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/254718181952?text=${encodedMessage}`;
+    
+    // Redirect to WhatsApp with confirmation message
+    window.location.href = whatsappLink;
   };
 
   const handleCheckout = () => setShowForm(true);

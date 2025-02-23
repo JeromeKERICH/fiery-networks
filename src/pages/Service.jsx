@@ -6,18 +6,6 @@ import CTA2 from "./CTA2";
 
 const services = [
   {
-    title: "LinkedIn Ghostwriting & Management Services",
-    description:
-      "Magnetic content that attracts attention, sparks conversations, and positions you as an expert.",
-    features: [
-      "Engaging Posts that showcase your unique voice.",
-      "Profile Optimization to make your bio stand out.",
-      "Content Strategy for consistent engagement.",
-      "Audience Growth for the right connections.",
-    ],
-    path: "/linkedinmanagement",
-  },
-  {
     title: "Event Hosting & Moderation",
     description:
       "Creating a vibe that leaves your audience talking long after the event ends.",
@@ -41,13 +29,13 @@ const services = [
     path: "/linkedinbootcamp",
   },
   {
-    title: "Freelancing & Content Marketing Consulting",
+    title: "1:1 LinkedIn Coaching",
     description:
-      "Learn how to create a solid freelancing career or drive results with content marketing.",
+      "Unlock the power of LinkedIn to elevate your professional brand and grow your network..",
     features: [
-      "Freelancing 101 for starting and thriving.",
-      "Content Marketing Strategy tailored to your audience.",
-      "One-on-One Coaching for specific goals.",
+      "LinkedIn Mastery for Personal Branding and Networking.",
+      "Customized Content Strategies to Engage Your Target Audience.",
+      "One-on-One Coaching to Achieve Your Career Goals."
     ],
     path: "/freelancingconsulting",
   },

@@ -12,7 +12,7 @@ const Testimonials = () => {
         </div>
 
         <div className="check-reviews">
-          <a href="#" title="Check reviews" className="reviews-link">
+          <a href="/reviews" title="Check reviews" className="reviews-link">
             Check all 20 reviews
           </a>
         </div>

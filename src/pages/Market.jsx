@@ -3,56 +3,42 @@ import { FaCheck } from "react-icons/fa";
 import { PaystackButton } from "react-paystack";
 import "./styles/Linkman.css";
 
-const FreelancingConsulting = () => {
+const LinkedInCoaching = () => {
   useEffect(() => {
-    // Reset scroll position to top on every route change
     window.scrollTo(0, 0);
   }, []);
-  
+
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    package: "Basic Package",
-    amount: 9900 * 100, // Default amount in kobo (multiplied by 100)
+    package: "LinkedIn Coaching Session",
+    amount: 5000 * 100, // Amount in kobo for Paystack
   });
 
   const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handlePackageChange = (e) => {
-    const selectedPackage = e.target.value;
-    const amount =
-      selectedPackage === "Basic Package" ? 9900 * 100 : 19900 * 100; // Amount in kobo
-    setFormData((prev) => ({
-      ...prev,
-      package: selectedPackage,
-      amount,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSuccess = () => {
-    // Redirect to WhatsApp group after payment
-    window.location.href = "https://chat.whatsapp.com/your-group-link"; // Replace with your WhatsApp group link
+    const message = `Hello, I have successfully booked a LinkedIn coaching session. Looking forward to it!`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappLink = `https://wa.me/254718181952?text=${encodedMessage}`;
+    window.location.href = whatsappLink;
   };
 
   const handleCheckout = () => setShowForm(true);
-
   const closeForm = () => setShowForm(false);
 
   const paystackConfig = {
     email: formData.email,
-    amount: formData.amount, // Amount in kobo
+    amount: formData.amount,
     publicKey,
-    currency: "KES", // Specify the currency as Kenyan Shillings (KES)
+    currency: "KES",
     metadata: {
       name: formData.name,
       phone: formData.phone,
@@ -62,132 +48,62 @@ const FreelancingConsulting = () => {
     onClose: () => alert("Payment was not completed. Please try again."),
   };
 
-
   return (
     <div className="service-detail">
       {/* Header Section */}
       <header className="service-header">
         <div className="header-content">
-          <h1>Freelancing & Content Marketing Consulting</h1>
+          <h1>1:1 LinkedIn Coaching</h1>
           <p>
-            Learn how to create a solid freelancing career or drive results with content marketing. 
-            Whether you're starting out or looking to scale your business, we provide personalized coaching to help you succeed.  <br></br>Our consulting services are tailored to your needs and goals. 
-            You'll learn to create a solid foundation for your freelancing career or enhance your content marketing strategies to drive measurable results.
+            Boost your personal brand and grow your network with expert LinkedIn strategies. This personalized coaching session will help you refine your profile, optimize your content, and build meaningful connections.
           </p>
         </div>
         <div className="header-image">
-          <img
-            src="assets/moder.jpg" // Replace with an actual image
-            alt="Freelancing & Content Marketing Consulting"
-          />
+          <img src="assets/link.jpg" alt="LinkedIn Coaching" />
         </div>
       </header>
 
       {/* Pricing Section */}
-      <div className="pricing-boxes">
-        <div className="pricing-box">
-          <h3>Basic Package</h3>
-          <p>Perfect for those just getting started with freelancing or content marketing.</p>
-          <p className="price">$99</p>
-          <ul>
-            <li>
-              <FaCheck className="tick-icon" /> Freelancing 101 Course
-            </li>
-            <li>
-              <FaCheck className="tick-icon" /> 5 Custom Content Ideas
-            </li>
-            <li>
-              <FaCheck className="tick-icon" /> One Coaching Session
-            </li>
-          </ul>
-        </div>
-        <div className="pricing-box">
-          <h3>Premium Package</h3>
-          <p>Ideal for those looking to rapidly scale their freelancing business or content marketing strategies.</p>
-          <p className="price">$199</p>
-          <ul>
-            <li>
-              <FaCheck className="tick-icon" /> Freelancing & Content Marketing Masterclass
-            </li>
-            <li>
-              <FaCheck className="tick-icon" /> 10 Custom Content Ideas
-            </li>
-            <li>
-              <FaCheck className="tick-icon" /> Two Coaching Sessions
-            </li>
-            <li>
-              <FaCheck className="tick-icon" /> Personalized Content Strategy
-            </li>
-          </ul>
-        </div>
+      <div className="pricing-box">
+        <h3>Coaching Session</h3>
+        <p>Unlock LinkedIn's full potential with tailored coaching.</p>
+        <p className="price">5000 KES</p>
+        <ul>
+          <li><FaCheck className="tick-icon" /> Profile Optimization</li>
+          <li><FaCheck className="tick-icon" /> Content Strategy Tips</li>
+          <li><FaCheck className="tick-icon" /> Networking & Engagement Strategies</li>
+          <li><FaCheck className="tick-icon" /> One-on-One Personalized Session</li>
+        </ul>
       </div>
 
-      
-
-        
       {/* Checkout Section */}
       <section className="checkout-section">
-        <h2>Ready to Elevate Your Freelancing Career?</h2>
-        <p>
-          Secure your spot today and start transforming your career. Choose the package that suits your goals and proceed with a secure payment.
-        </p>
+        <h2>Ready to Elevate Your LinkedIn Game?</h2>
+        <p>Book your personalized coaching session today for just 5000 KES.</p>
 
         <button className="checkout-button" onClick={handleCheckout}>
-          Get Started Now
+          Book Now
         </button>
 
         {showForm && (
           <>
             <div className="form-backdrop" onClick={closeForm}></div>
-
             <div className="checkout-form">
-              <button className="close-now-button" onClick={closeForm}>
-                &times;
-              </button>
+              <button className="close-now-button" onClick={closeForm}>&times;</button>
               <h3>Complete Your Payment</h3>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} />
               </div>
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
+                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
               </div>
-              <div className="form-group">
-                <label htmlFor="package">Select Package</label>
-                <select
-                  id="package"
-                  name="package"
-                  value={formData.package}
-                  onChange={handlePackageChange}
-                >
-                  <option value="Basic Package">$99 - Basic Package</option>
-                  <option value="Premium Package">$199 - Premium Package</option>
-                </select>
-              </div>
-              <PaystackButton className="pay-buttons" {...paystackConfig}>Pay Now</PaystackButton>
+              <PaystackButton className="pay-buttons" {...paystackConfig}>Pay 5000 KES</PaystackButton>
             </div>
           </>
         )}
@@ -196,4 +112,4 @@ const FreelancingConsulting = () => {
   );
 };
 
-export default FreelancingConsulting;
+export default LinkedInCoaching;
