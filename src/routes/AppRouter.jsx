@@ -15,7 +15,7 @@ import Whatsapp from '../pages/Whatsapp';
 import Book from '../pages/Book';
 import LinkedInManagement from '../pages/Linkman';
 import EventHostingModeration from '../pages/Hosting';
-import LinkedInBootcamp from '../pages/Bootcamp';
+import LinkedInBootcamp from '../pages/Linkedin';
 import FreelancingConsulting from '../pages/Market';
 import PopUpEvents from '../pages/Popup';
 import Landing from '../pages/Landing';
@@ -43,7 +43,7 @@ const AppRouter = () => {
                 <Route path="/book" element={<Book/>}/>
                 <Route path="linkedinmanagement" element={<LinkedInManagement/>}/>
                 <Route path="eventhosting" element={<EventHostingModeration/>}/>
-                <Route path="linkedinbootcamp" element={<LinkedInBootcamp/>}/>
+                <Route path="linkedinbootcamp" element={<Linkedin/>}/>
                 <Route path="freelancingconsulting" element={<FreelancingConsulting/>}/>
                 <Route path="popupevents" element={<PopUpEvents/>}/>
                 <Route path="landing" element={<Landing/>}/>
