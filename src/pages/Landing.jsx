@@ -1,5 +1,6 @@
 import { FaUserTie, FaThumbsUp, FaUsers, FaClock } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { PaystackButton } from "react-paystack";
 import "./styles/Landing.css"; 
 
@@ -89,7 +90,7 @@ const Landing = () => {
   return (
     <div className="landing-container">
       {/* Hero Section */}
-      <h4>21-Day LinkedIn Mastery Bootcamp</h4>
+      <h4>21-Day LinkedIn Mastery Program</h4>
       <h1>Transform Your LinkedIn Profile </h1>
       <h2>into a Lead-Generating Machine in 21 Days</h2>
       <p>
@@ -153,8 +154,8 @@ const Landing = () => {
 
       
       <div className="learn-moreinfo">
-        <p>Discover the strategies that you’ll gain in this 21-Days LinkedIn Mastery.</p>
-        <a href="/linkedinbootcamp" className="learn-more-btn">Learn More</a>
+        <p>In just 21 days, learn simple and powerful strategies to master LinkedIn!</p>
+        <Link to="/linkedinbootcamp" className="learn-more-btn">Learn More</Link>
       </div>
       {/* Four Boxes Section */}
       <div className="landing-box-container">

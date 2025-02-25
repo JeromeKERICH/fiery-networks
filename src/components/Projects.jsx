@@ -3,14 +3,14 @@ import './styles/Projects.css';
 
 const projectsData = [
     {
-        title: "Event Manager",
-        description: "Successfully planned and executed over 100 corporate and social events, ensuring seamless logistics and attendee satisfaction.",
-        image: "/assets/event.jpg", // Replace with actual image paths
+        title: "Event Powerhouse",
+        description: "Successfully planned and executed over 100 (virtual & physical) events, ensuring seamless logistics and attendee satisfaction.",
+        image: "/assets/MM2.JPG", // Replace with actual image paths
       },
       {
         title: "LinkedIn Ghost Writer",
-        description: "Crafted over 500 professional LinkedIn profiles and posts, driving visibility and engagement for clients across industries.",
-        image: "/assets/ghost.jpg",
+        description: "Crafted over 100 professional LinkedIn profiles and posts, driving visibility and engagement for clients across industries.",
+        image: "/assets/MM2.JPG",
       },
       {
         title: "Brand Manager",

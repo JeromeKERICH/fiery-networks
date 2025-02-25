@@ -9,7 +9,7 @@ const courses = [
     link: "/social" 
   },
   {
-    title: "WhatsApp LinkedIn Courses (Short Courses, 10 Sessions)",
+    title: "LinkedIn Courses (3 Sessions) Each",
     description: "Quick, actionable lessons on leveraging WhatsApp and LinkedIn for business growth.",
     link: "/whatsapp" 
   },

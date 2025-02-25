@@ -1,5 +1,4 @@
-// Testimonials.js
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/Testimonials.css';
 
 const Testimonials = () => {
@@ -12,9 +11,9 @@ const Testimonials = () => {
         </div>
 
         <div className="check-reviews">
-          <a href="/reviews" title="Check reviews" className="reviews-link">
+          <Link to="/reviews" title="Check reviews" className="reviews-link">
             Check all 20 reviews
-          </a>
+          </Link>
         </div>
 
         <div className="testimonials-wrapper">
@@ -37,17 +36,18 @@ const Testimonials = () => {
 
           <div className="testimonials-card">
             <blockquote className="testimonials-text">
-              <p>“I have had the pleasure of knowing Miriam both personally and professionally, and I can effortlessly and confidently say that she is an exceptional being with remarkable talents.”</p>
+              <p>“Miriam is an Author, an exceptional copywriter with deep expertise in storytelling, and a fantastic event host.Her passion, dedication, and commitment to her craft are second to none. I highly recommend her
+”</p>
             </blockquote>
             <div className="testimonials-author">
               <img
                 className="author-avatar"
-                src="assets/beril.jpg"
+                src="assets/toyin.jpg"
                 alt="Beril Odhiambo"
               />
               <div className="author-info">
-                <p className="author-name">Beryl Odhiambo</p>
-                <p className="author-job">SEO Content Writer</p>
+                <p className="author-name">Toyin Tope-Adedipe</p>
+                <p className="author-job">Mental Wellness Coach</p>
               </div>
             </div>
           </div>

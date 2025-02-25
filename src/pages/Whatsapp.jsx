@@ -16,10 +16,10 @@ const Whatsapp = () => {
   return (
     <div className="whatsapp-course-page">
       <header className="header-section">
-        <h1>WhatsApp LinkedIn Courses (10 Sessions)</h1>
+        <h1>LinkedIn Courses (3 Sessions) Each</h1>
         <h3>Short, Sharp, and To the Point</h3>
         <p>
-          These 10-session courses are delivered via WhatsApp every weekday (excluding weekends) and are perfect for anyone who prefers bite-sized learning that fits into their busy schedule.
+          These courses are delivered via WhatsApp and are perfect for anyone who prefers bite-sized learning that fits into their busy schedule.
         </p>
         <button onClick={toggleModal} className="cta-button">
           Start Learning Now
@@ -43,7 +43,7 @@ const Whatsapp = () => {
           </div>
         </div>
         <p className="outcome-text">
-          After just 10 days, you’ll have more confidence in using LinkedIn to grow your brand, expand your network, and start creating a meaningful online presence.
+          After just 3 sessions, you’ll have more confidence in using LinkedIn to grow your brand, expand your network, and start creating a meaningful online presence.
         </p>
       </section>
 

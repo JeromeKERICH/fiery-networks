@@ -12,13 +12,14 @@ const AboutPage = () => {
     <div>
       <header className="hero-section">
         <div className="hero-content">
-            <img src="assets/about.jpg" alt="Miriam Maru" className="profile-photo" />
+            <img src="assets/back11.jpg" alt="Miriam Maru" className="profile-photo" />
             <div className="hero-text">
             <h1>I'm Miriam Maru</h1>
             <h2>The Fiery Lady Igniting Global Impact</h2>
             <p>
                 I threw the rules out the window and built my own path to freedom. If you’re ready to transform your LinkedIn, kickstart your freelance career, or supercharge your social media strategy, you’re in the right place.
             </p>
+    
             <div className="hero-buttons">
                 <Link to="/ask" className="cta-button1">Pick My Brain</Link>
                 <Link to="/servicepage" className="cta-button2">Explore My Services</Link>

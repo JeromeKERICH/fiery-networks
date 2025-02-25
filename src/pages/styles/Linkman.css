@@ -25,6 +25,30 @@
     font-weight: 550;
   }
 
+  .header-content p {
+    font-size: 1.2rem;
+  }
+
+  .header-content .whatyou {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #e64a19;
+    font-size: 1.5rem;
+  }
+  .header-content li {
+    font-size: 1.2rem;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .header-content .rates {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
 
   .header-image img {
     width: 100%;
@@ -309,6 +333,11 @@
 
     .service-details h2 {
         font-size: 1.3rem;
+    }
+
+
+    .header-content li {
+      font-size: 1.1rem;
     }
 
     .features li {

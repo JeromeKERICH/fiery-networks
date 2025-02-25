@@ -28,6 +28,10 @@
   color: goldenrod;
 }
 
+.footer-logo img {
+  width: 100px;
+}
+
 .footer-description {
   font-size: 0.9rem;
   line-height: 1.6;
@@ -45,7 +49,7 @@
   padding: 0;
 }
 
-.footer-links li {
+.footer-links ul li {
   margin-bottom: 0.5rem;
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"; // Importing icons
 import "./styles/Footer.css";
 
@@ -8,9 +8,11 @@ const Footer = () => {
       <div className="footer-container">
         {/* Logo and Description */}
         <div className="footer-logo-section">
-          <div className="footer-logo">Fiery Networks</div>
+          <div className="footer-logo">
+            <img src="assets/logo1.png"></img>
+          </div>
           <p className="footer-description">
-            Your Fiery Lady. Your business Secured
+            Your Fiery Lady. Your Brand Igniter
           </p>
         </div>
 
@@ -46,7 +48,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        © 2025 Fiery Networks. All Rights Reserved. <a href="www.trichenest.com">Designed by Triche Nest</a>
+        © 2025 Fiery Networks. All Rights Reserved. <Link to="www.trichenest.com">Designed by Triche Nest</Link>
       </div>
     </footer>
   );

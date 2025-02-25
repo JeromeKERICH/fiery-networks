@@ -55,31 +55,49 @@ const LinkedInCoaching = () => {
         <div className="header-content">
           <h1>1:1 LinkedIn Coaching</h1>
           <p>
-            Boost your personal brand and grow your network with expert LinkedIn strategies. This personalized coaching session will help you refine your profile, optimize your content, and build meaningful connections.
+          With my personalized coaching, you’ll learn how to position yourself as an authority, attract the right audience, and make LinkedIn work for you—whether you’re job hunting, growing your business, or building a strong personal brand.
+
           </p>
         </div>
         <div className="header-image">
-          <img src="assets/link.jpg" alt="LinkedIn Coaching" />
+          <img src="assets/coaching.jpg" alt="LinkedIn Coaching" />
         </div>
       </header>
 
+
+      <div className="introduction">
+        <h1>What You’ll Get</h1>
+      </div>
       {/* Pricing Section */}
       <div className="pricing-box">
-        <h3>Coaching Session</h3>
-        <p>Unlock LinkedIn's full potential with tailored coaching.</p>
-        <p className="price">5000 KES</p>
         <ul>
-          <li><FaCheck className="tick-icon" /> Profile Optimization</li>
-          <li><FaCheck className="tick-icon" /> Content Strategy Tips</li>
-          <li><FaCheck className="tick-icon" /> Networking & Engagement Strategies</li>
-          <li><FaCheck className="tick-icon" /> One-on-One Personalized Session</li>
+          <li><FaCheck className="tick-icon" /> Profile Optimization – Make your profile stand out so the right people find you.
+</li>
+          <li><FaCheck className="tick-icon" /> Content Strategy – Learn what to post, when to post, and how to keep your audience engaged.</li>
+          <li><FaCheck className="tick-icon" /> Networking Guidance – Build connections that matter without feeling awkward or salesy.</li>
+          <li><FaCheck className="tick-icon" /> Lead Generation Tips – Discover how to turn LinkedIn into a client or job opportunity magne</li>
+        </ul>
+      </div>
+
+
+      <div className="introduction">
+        <h1>How it Works</h1>
+      </div>
+      {/* Pricing Section */}
+      <div className="pricing-box">
+        <ul>
+          <li><FaCheck className="tick-icon" /> Step 1: Book a session for just Ksh 5,000
+</li>
+          <li><FaCheck className="tick-icon" /> Step 2: We assess your current LinkedIn presence and set clear goals..</li>
+          <li><FaCheck className="tick-icon" /> Step 3: I’ll walk you through the exact strategies to get noticed and build credibility.</li>
+          <li><FaCheck className="tick-icon" /> Step 4: You implement, and I’ll guide you through any challenges along the way.</li>
         </ul>
       </div>
 
       {/* Checkout Section */}
       <section className="checkout-section">
         <h2>Ready to Elevate Your LinkedIn Game?</h2>
-        <p>Book your personalized coaching session today for just 5000 KES.</p>
+        <p>Book your personalized coaching session today for just 5000 KES. ($50)</p>
 
         <button className="checkout-button" onClick={handleCheckout}>
           Book Now

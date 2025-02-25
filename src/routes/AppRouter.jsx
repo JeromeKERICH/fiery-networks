@@ -21,6 +21,7 @@ import PopUpEvents from '../pages/Popup';
 import Landing from '../pages/Landing';
 import AMA from '../pages/Ask';
 import Reviews from '../pages/Reviews';
+import Management from '../pages/Socialmedia';
 
 
 
@@ -49,6 +50,7 @@ const AppRouter = () => {
                 <Route path="landing" element={<Landing/>}/>
                 <Route path="ask" element={<AMA/>}/>
                 <Route path="reviews" element={<Reviews/>}/>
+                <Route path="management" element={<Management/>}/>
                
                  
             </Routes>

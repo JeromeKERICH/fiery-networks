@@ -71,13 +71,14 @@ function Book() {
           At my boss’s house in Saudi Arabia, I contemplated how to get out of
           the rat race—the 9 to 5, as many call it. I didn’t know freelancing
           existed. I didn’t know people could get paid to write, or even that
-          people got paid online... Yep, it was 2022, and I had no idea.
+          people got paid online... Yep, it was 2022, and I had no idea. All I knew was that I wanted a flexible job. <br></br> <br></br>Well, God answered my prayer when I stumbled upon freelancing! It has completely changed my life, and it could change yours too.
+          This book will encourage you to stay the course and push for even greater heights in your freelancing journey. But hey, I don’t want to spill all the beans here - grab your copy and dive into the full story! Your freelancing breakthrough could be just a page away.
         </p>
       </section>
 
       <section className="cta">
         <a href="#" className="cta-button" onClick={toggleModal}>
-          Get Your Copy Now
+          Get Your Copy
         </a>
       </section>
 

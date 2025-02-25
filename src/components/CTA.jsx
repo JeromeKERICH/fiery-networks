@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { Link } from "react-router-dom";
 import "./styles/CTA.css";
 
 const CTASection = () => {
@@ -7,11 +8,11 @@ const CTASection = () => {
       <div className="ctas-content">
         <h2>Ready to Ignite Your Future?</h2>
         <p>
-          Don't wait for change to happen. Make it happen. Whether you're starting your freelancing journey or scaling your business, we're here to set your goals on fire. Join us, and let's make magic together.
+          Don't wait for change to happen. Make it happen. Join me, and let's make magic together.
         </p>
         <div className="ctass-buttons">
-          <a href="/book" className="ctass-btn books-btn">Buy my Book</a>
-          <a href="/servicepage" className="ctass-btn services-btn">Explore My Services</a>
+          <Link to="/book" className="ctass-btn books-btn">Buy my Book</Link>
+          <Link to="/servicepage" className="ctass-btn services-btn">Explore My Services</Link>
         </div>
       </div>
     </section>
