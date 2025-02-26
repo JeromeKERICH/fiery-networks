@@ -12,7 +12,7 @@ const Testimonials = () => {
 
         <div className="check-reviews">
           <Link to="/reviews" title="Check reviews" className="reviews-link">
-            Check all 20 reviews
+            Check all reviews
           </Link>
         </div>
 
@@ -43,7 +43,7 @@ const Testimonials = () => {
               <img
                 className="author-avatar"
                 src="assets/toyin.jpg"
-                alt="Beril Odhiambo"
+                alt="Toyin Tope-Adedipe"
               />
               <div className="author-info">
                 <p className="author-name">Toyin Tope-Adedipe</p>
@@ -60,10 +60,12 @@ const Testimonials = () => {
               <img
                 className="author-avatar"
                 src="assets/sumaya.jpg"
+
                 alt="Sumaya"
               />
               <div className="author-info">
                 <p className="author-name">Sumaya</p>
+
                 <p className="author-job">Auditor</p>
               </div>
             </div>

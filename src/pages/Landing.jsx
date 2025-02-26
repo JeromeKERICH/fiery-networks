@@ -1,6 +1,7 @@
 import { FaUserTie, FaThumbsUp, FaUsers, FaClock } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 import { PaystackButton } from "react-paystack";
 import "./styles/Landing.css"; 
 
@@ -41,9 +42,9 @@ const Landing = () => {
     const [openIndex, setOpenIndex] = useState(null);
     const faqs = [
         {
-        question: "Is this bootcamp for beginners?",
+        question: "Is this program for beginners?",
         answer:
-            "Yes! This bootcamp is designed for all skill levels, whether you’re new to LinkedIn or looking to take your profile to the next level.",
+            "Yes! This program is designed for all skill levels, whether you’re new to LinkedIn or looking to take your profile to the next level.",
         },
         {
         question: "How much time do I need to commit each day?",
@@ -200,24 +201,26 @@ const Landing = () => {
       <h1>Meet Your Instructor</h1>
       
       {/* Video Section */}
-      <div className="instructor-video">
-        <iframe 
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-          title="Instructor Introduction"
-          allowFullScreen
-        ></iframe>
+      <div className="instructor-video" style={{ maxWidth: "100%", aspectRatio: "16/9" }}>
+      <ReactPlayer
+        url="https://youtu.be/Y7RIbn7wItU"
+        width="100%"
+        height="100%"
+        controls={true}
+      />
       </div>
 
       {/* Content Section */}
       <div className="instructor-content">
         <h1>Hey Dreamer, </h1>
         <p>
-          I’m <strong>Miriam Maru</strong>, a LinkedIn strategist with over 10 years of experience 
-          helping professionals grow their personal brands. I’ve helped 500+ clients land dream jobs, 
-          attract clients, and grow their businesses using LinkedIn. 
+          I’m <strong>Miriam Maru</strong>, A heartbreak pushed me to LinkedIn, but LinkedIn pushed me to freedom—and now, I’m here to push you to yours. 
+          I went from scrubbing floors in Saudi Arabia (yes, I was a maid) to becoming a sought-after LinkedIn ghostwriter and strategist. Today, I help CEOs, founders, and professionals craft brand stories that make people stop scrolling, take action, and say, “Wow, I need to work with this person!”
+
         </p>
         <p>
-          Now, I’m sharing my proven strategies in this 21-day bootcamp so you can achieve the same results.
+        So, what’s my secret? I know how to make LinkedIn work for you—whether you’re starting from scratch or just tired of getting ignored on your posts.
+
         </p>
       </div>
     </div>

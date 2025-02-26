@@ -12,7 +12,7 @@ const AboutPage = () => {
     <div>
       <header className="hero-section">
         <div className="hero-content">
-            <img src="assets/back11.jpg" alt="Miriam Maru" className="profile-photo" />
+            <img src="assets/about.jpg" alt="Miriam Maru" className="profile-photo" />
             <div className="hero-text">
             <h1>I'm Miriam Maru</h1>
             <h2>The Fiery Lady Igniting Global Impact</h2>

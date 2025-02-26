@@ -60,7 +60,7 @@ const ContactPage = () => {
           <div className="contact-item">
             <i className="fas fa-phone-alt"></i>
             <div>
-              <p>+254 729 466 141</p>
+              <p>+254 718 181 952</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ const ContactPage = () => {
           <div className="contact-item">
             <i className="fab fa-whatsapp"></i>
             <div>
-              <a href="https://wa.me/254729466141" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/254718181952" target="_blank" rel="noopener noreferrer">
                 Chat with us on WhatsApp
               </a>
             </div>

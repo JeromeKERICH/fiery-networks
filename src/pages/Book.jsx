@@ -31,7 +31,7 @@ function Book() {
   
     if (formData.package === "Soft Copy") {
       window.open(
-        "assets/Newbie.pdf", // Replace with your actual book download link
+        "assets/fierybook.pdf", // Replace with your actual book download link
         "_blank"
       );
     }

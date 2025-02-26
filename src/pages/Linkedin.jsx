@@ -96,6 +96,9 @@ const LinkedInBootcamp = () => {
         <div className="landing-box">
           <h3><strong>Lead Generation:</strong> Turning connections into clients and job offers.</h3>
         </div>
+        <div className="landing-box">
+          <h3><strong>Analytics:</strong> I will guide you on how to analyze your post.</h3>
+        </div>
       </div>
 
       <section className="checkout-section">

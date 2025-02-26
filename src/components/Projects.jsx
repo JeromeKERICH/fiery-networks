@@ -5,12 +5,12 @@ const projectsData = [
     {
         title: "Event Powerhouse",
         description: "Successfully planned and executed over 100 (virtual & physical) events, ensuring seamless logistics and attendee satisfaction.",
-        image: "/assets/MM2.JPG", // Replace with actual image paths
+        image: "/assets/events.jpg", // Replace with actual image paths
       },
       {
         title: "LinkedIn Ghost Writer",
         description: "Crafted over 100 professional LinkedIn profiles and posts, driving visibility and engagement for clients across industries.",
-        image: "/assets/MM2.JPG",
+        image: "/assets/gho.jpg",
       },
       {
         title: "Brand Manager",
@@ -20,7 +20,7 @@ const projectsData = [
       {
         title: "Content Manager",
         description: "Produced high-quality content for blogs, websites, and social media, growing client reach and engagement by 150%.",
-        image: "/assets/content.jpg",
+        image: "/assets/conn.jpg",
       },
 ];
 

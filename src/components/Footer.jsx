@@ -30,8 +30,8 @@ const Footer = () => {
         {/* Contact Us */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>contact@fierynetworks.com</p>
-          <p>+254 729 466 141</p>
+          <p>info@fierynetwork.com</p>
+          <p>+254 718 181 952</p>
         </div>
 
         {/* Social Links */}
@@ -48,7 +48,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        © 2025 Fiery Networks. All Rights Reserved. <Link to="www.trichenest.com">Designed by Triche Nest</Link>
+        © 2025 Fiery Networks. All Rights Reserved. <a href="https://trichenest.com">Designed by Triche Nest</a>
       </div>
     </footer>
   );
